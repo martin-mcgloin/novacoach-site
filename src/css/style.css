@@ -88,16 +88,18 @@ p { margin: 0 0 1em; }
 .facts { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .5rem 1.6rem; font-size: .92rem; color: var(--muted); }
 .facts li::before { content: "— "; color: var(--yellow); }
 
-/* Section drawing: the cross-section sketch */
+/* Section drawing: a road cross section (normalprofil) */
 .section-drawing { margin-top: 3rem; border-bottom: 1px solid var(--line); }
-.section-drawing svg { width: 100%; height: 120px; display: block; }
-.section-drawing .draw { fill: none; stroke: var(--ink-2); stroke-width: 1.3; stroke-linecap: round; stroke-dasharray: 2000; stroke-dashoffset: 2000; animation: draw 2.4s .3s ease-out forwards; opacity: .75; }
-.section-drawing .road { stroke-width: 2.2; animation-delay: .9s; }
-.section-drawing .slope { animation-delay: 1.3s; }
-.section-drawing .centre { stroke: var(--yellow); stroke-width: 3; stroke-dasharray: 26 16; stroke-dashoffset: 0; animation: none; opacity: 1; }
-.section-drawing .hatch { stroke-width: 1; opacity: .35; animation-delay: 1.5s; }
+.section-drawing svg { width: min(100%, 1200px); height: auto; max-height: 200px; display: block; margin: 0 auto; }
+.section-drawing .fillbody { fill: var(--paper-2); stroke: none; opacity: 0; animation: fade 1s 2s forwards; }
+.section-drawing .draw { fill: none; stroke: var(--ink-2); stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 2000; stroke-dashoffset: 2000; animation: draw 2.2s .3s ease-out forwards; }
+.section-drawing .terrain { stroke-width: 1.2; opacity: .6; }
+.section-drawing .road { stroke-width: 2.4; animation-delay: .9s; }
+.section-drawing .layers { stroke-width: 1; opacity: .5; animation-delay: 1.6s; }
+.section-drawing .centre { stroke: var(--yellow); stroke-width: 2; stroke-dasharray: 14 6 2 6; stroke-dashoffset: 0; animation: fade .8s 2.2s both; opacity: 0; }
+@keyframes fade { to { opacity: 1; } }
 @keyframes draw { to { stroke-dashoffset: 0; } }
-@media (prefers-reduced-motion: reduce) { .hero-text > *, .hero-photo { animation: none; } .section-drawing .draw { animation: none; stroke-dashoffset: 0; } }
+@media (prefers-reduced-motion: reduce) { .hero-text > *, .hero-photo { animation: none; } .section-drawing .draw { animation: none; stroke-dashoffset: 0; } .section-drawing .centre, .section-drawing .fillbody { animation: none; opacity: 1; } }
 
 /* Cards */
 .cards-3 { display: grid; gap: 2rem; }

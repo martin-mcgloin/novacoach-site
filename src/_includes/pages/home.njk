@@ -19,12 +19,17 @@
     </figure>
   </div>
   <div class="section-drawing" aria-hidden="true">
-    <svg viewBox="0 0 1200 160" preserveAspectRatio="none">
-      <path class="draw terrain" d="M0 120 C120 100 200 130 320 110 S520 60 640 80 S880 140 1000 110 S1140 90 1200 100" />
-      <path class="draw road" d="M300 96 L420 78 L780 78 L900 96" />
-      <path class="draw slope" d="M300 96 L340 108 M900 96 L860 112" />
-      <path class="draw centre" d="M420 74 L780 74" />
-      <path class="draw hatch" d="M440 78 L430 92 M470 78 L460 92 M500 78 L490 92 M530 78 L520 92 M560 78 L550 92 M590 78 L580 92 M620 78 L610 92 M650 78 L640 92 M680 78 L670 92 M710 78 L700 92 M740 78 L730 92 M770 78 L760 92" />
+    <svg viewBox="0 0 1200 200" preserveAspectRatio="xMidYMid meet">
+      <!-- pavement body -->
+      <path class="fillbody" d="M440 95 L600 90 L760 95 L760 117 L600 112 L440 117 Z" />
+      <!-- existing terrain -->
+      <path class="draw terrain" d="M0 62 C150 58 240 70 300 72 S480 110 600 128 S860 150 940 150 S1120 152 1200 158" />
+      <!-- finished road: shoulders, carriageway with crossfall, ditch and cut slope left, fill slope right -->
+      <path class="draw road" d="M300 72 L386 116 L410 98 L440 95 L600 90 L760 95 L790 98 L868 150" />
+      <!-- pavement layers -->
+      <path class="draw layers" d="M440 101 L600 96 L760 101 M440 108 L600 103 L760 108 M440 117 L600 112 L760 117" />
+      <!-- centre line (CL) -->
+      <path class="draw centre" d="M600 40 L600 150" />
     </svg>
   </div>
 </section>
