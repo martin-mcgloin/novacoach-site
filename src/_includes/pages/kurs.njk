@@ -1,0 +1,31 @@
+{%- set t = tr[lang] -%}
+{%- set k = t.kurs -%}
+<section class="wrap block page-head">
+  <h1>{{ k.h1 }}</h1>
+  <p class="lead">{{ k.lead }}</p>
+  <p class="note">{{ t.common.noPrices }}</p>
+</section>
+{%- for c in k.courses %}
+<section class="wrap block course" id="{{ c.id }}">
+  <div class="course-head">
+    <p class="tag">{{ c.tag }}</p>
+    <h2>{{ c.h }}</h2>
+    <p class="lead">{{ c.intro }}</p>
+  </div>
+  <div class="course-grid">
+    <div>
+      <h3>{{ c.learnTitle }}</h3>
+      <ul class="ticks">{% for i in c.learn %}<li>{{ i }}</li>{% endfor %}</ul>
+      <h3>{{ c.afterTitle }}</h3>
+      <p class="big">{{ c.after }}</p>
+    </div>
+    <aside class="course-aside">
+      <h3>{{ c.needTitle }}</h3>
+      <ul>{% for i in c.need %}<li>{{ i }}</li>{% endfor %}</ul>
+      <h3>{{ c.practicalTitle }}</h3>
+      <ul>{% for i in c.practical %}<li>{{ i }}</li>{% endfor %}</ul>
+      <a class="btn" href="{{ '/kontakt/' if lang == 'no' else '/en/contact/' }}">{{ t.common.cta }}</a>
+    </aside>
+  </div>
+</section>
+{%- endfor %}

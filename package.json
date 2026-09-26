@@ -1,0 +1,13 @@
+{
+  "name": "novacoach-site",
+  "version": "0.1.0",
+  "private": true,
+  "description": "NovaCoach – Novapoint and Quadri training and coaching by Patrick Mc Gloin. Static site built with Eleventy, deployed on Netlify.",
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

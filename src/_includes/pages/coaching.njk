@@ -1,0 +1,21 @@
+{%- set t = tr[lang] -%}
+{%- set c = t.coaching -%}
+<section class="wrap block page-head">
+  <h1>{{ c.h1 }}</h1>
+  <p class="lead">{{ c.lead }}</p>
+</section>
+<section class="wrap block course">
+  <div class="course-grid">
+    <div>
+      {%- for p in c.body %}<p class="{{ 'big' if loop.first }}">{{ p }}</p>{% endfor %}
+      <h3>{{ c.topicsTitle }}</h3>
+      <ul class="ticks">{% for i in c.topics %}<li>{{ i }}</li>{% endfor %}</ul>
+    </div>
+    <aside class="course-aside">
+      <h3>{{ c.formatTitle }}</h3>
+      <ul>{% for i in c.format %}<li>{{ i }}</li>{% endfor %}</ul>
+      <p class="small">{{ t.common.noPrices }}</p>
+      <a class="btn" href="{{ '/kontakt/' if lang == 'no' else '/en/contact/' }}">{{ t.common.cta }}</a>
+    </aside>
+  </div>
+</section>

@@ -1,0 +1,7 @@
+{%- set t = tr[lang] -%}
+{%- set k = t.takk -%}
+<section class="wrap block page-head">
+  <h1>{{ k.h1 }}</h1>
+  <p class="lead">{{ k.p }}</p>
+  <a class="btn" href="{{ '/' if lang == 'no' else '/en/' }}">{{ k.back }}</a>
+</section>

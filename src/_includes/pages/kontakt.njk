@@ -1,0 +1,15 @@
+{%- set t = tr[lang] -%}
+{%- set k = t.kontakt -%}
+<section class="wrap block page-head">
+  <h1>{{ k.h1 }}</h1>
+  <p class="lead">{{ k.lead }}</p>
+</section>
+<section class="wrap block contact-grid" id="interesse">
+  <div>{% include "form.njk" %}</div>
+  <aside class="course-aside">
+    <h3>{{ k.direct }}</h3>
+    <p><a href="mailto:{{ site.email }}">{{ site.email }}</a><br><a href="tel:{{ site.phoneHref }}">{{ site.phone }}</a></p>
+    <p><a href="{{ site.linkedin }}" rel="me noopener" target="_blank">{{ t.footer.linkedin }}</a></p>
+    <p class="small">{{ site.legalName }}<br>{{ site.address }}</p>
+  </aside>
+</section>

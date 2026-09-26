@@ -1,0 +1,34 @@
+{%- set t = tr[lang] -%}
+{%- set o = t.om -%}
+<section class="wrap block page-head about-head">
+  <div>
+    <h1>{{ o.h1 }}</h1>
+    <p class="lead">{{ o.lead }}</p>
+  </div>
+  <figure class="about-photo"><img src="/img/patrick.jpg" srcset="/img/patrick-640.jpg 640w, /img/patrick.jpg 1050w" sizes="(min-width: 900px) 30vw, 80vw" alt="Patrick Mc Gloin" width="1050" height="1400"></figure>
+</section>
+<section class="wrap block story">
+  {%- for s in o.sections %}
+  <div class="story-row">
+    <h2>{{ s.h }}</h2>
+    <p>{{ s.p }}</p>
+  </div>
+  {%- endfor %}
+</section>
+<section class="band">
+  <div class="wrap">
+    <h2 class="h2-rule">{{ o.timelineTitle }}</h2>
+    <dl class="timeline">
+      {%- for r in o.timeline %}<div><dt>{{ r[0] }}</dt><dd>{{ r[1] }}</dd></div>{% endfor %}
+    </dl>
+  </div>
+</section>
+{#- Testimonials: enable once a quote is approved. See 03-website/quotes.md
+<section class="wrap block">
+  <h2 class="h2-rule">{{ o.quoteTitle }}</h2>
+  <blockquote class="quote"><p>…</p><cite>Jonas Wenner, …</cite></blockquote>
+</section>
+-#}
+<section class="wrap block">
+  <a class="btn" href="{{ '/kontakt/' if lang == 'no' else '/en/contact/' }}">{{ t.common.cta }}</a>
+</section>

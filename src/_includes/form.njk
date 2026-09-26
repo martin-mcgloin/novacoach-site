@@ -1,0 +1,38 @@
+{%- set t = tr[lang] -%}
+{%- set f = t.form -%}
+<form class="form" name="interesse" method="POST" action="{{ '/takk/' if lang == 'no' else '/en/thanks/' }}" data-netlify="true" netlify-honeypot="bot-field">
+  <input type="hidden" name="form-name" value="interesse">
+  <input type="hidden" name="lang" value="{{ lang }}">
+  <p class="hp"><label>Leave empty: <input name="bot-field"></label></p>
+  <div class="grid-2">
+    <label>{{ f.name }}<input name="name" required autocomplete="name"></label>
+    <label>{{ f.company }}<input name="company" required autocomplete="organization"></label>
+    <label>{{ f.email }}<input name="email" type="email" required autocomplete="email"></label>
+    <label>{{ f.phone }}<input name="phone" type="tel" autocomplete="tel"></label>
+  </div>
+  <fieldset>
+    <legend>{{ f.offer }}</legend>
+    {%- for o in f.offers %}
+    <label class="choice"><input type="radio" name="offer" value="{{ o }}" {{ 'required' if loop.first }} data-flagship="{{ 'true' if loop.first else 'false' }}"><span>{{ o }}</span></label>
+    {%- endfor %}
+  </fieldset>
+  <label class="share" id="share-wrap" hidden><input type="checkbox" name="share_project" value="ja"><span>{{ f.share }}</span></label>
+  <div class="grid-2">
+    <label>{{ f.location }}<input name="location" autocomplete="address-level2"></label>
+    <label>{{ f.team }}<input name="team_size" inputmode="numeric" pattern="[0-9]*"></label>
+  </div>
+  <fieldset>
+    <legend>{{ f.timing }}</legend>
+    {%- for o in f.timings %}
+    <label class="choice"><input type="radio" name="timing" value="{{ o }}"><span>{{ o }}</span></label>
+    {%- endfor %}
+  </fieldset>
+  <label>{{ f.message }}<textarea name="message" rows="5"></textarea></label>
+  <div class="form-foot">
+    <button type="submit" class="btn">{{ f.submit }}</button>
+    <p class="small">{{ t.common.responseNote }} {{ f.privacy }}</p>
+  </div>
+</form>
+<script>
+(function(){var w=document.getElementById('share-wrap');if(!w)return;var r=document.querySelectorAll('input[name="offer"]');function u(){var on=false;r.forEach(function(x){if(x.checked&&x.dataset.flagship==='true')on=true;});w.hidden=!on;}r.forEach(function(x){x.addEventListener('change',u);});u();})();
+</script>

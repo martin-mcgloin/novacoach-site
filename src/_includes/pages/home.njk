@@ -1,0 +1,81 @@
+{%- set t = tr[lang] -%}
+{%- set h = t.home -%}
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <p class="eyebrow">{{ h.eyebrow }}</p>
+      <h1>{{ h.h1 }}</h1>
+      <p class="lead">{{ h.lead }}</p>
+      <div class="actions">
+        <a class="btn" href="#interesse">{{ t.common.cta }}</a>
+        <a class="btn btn-ghost" href="{{ '/kurs/' if lang == 'no' else '/en/courses/' }}">{{ t.common.ctaCourses }}</a>
+      </div>
+      <ul class="facts">
+        {%- for f in t.common.facts %}<li>{{ f }}</li>{% endfor -%}
+      </ul>
+    </div>
+    <figure class="hero-photo">
+      <img src="/img/patrick.jpg" srcset="/img/patrick-640.jpg 640w, /img/patrick.jpg 1050w" sizes="(min-width: 900px) 40vw, 90vw" alt="Patrick Mc Gloin" width="1050" height="1400" fetchpriority="high">
+    </figure>
+  </div>
+  <div class="section-drawing" aria-hidden="true">
+    <svg viewBox="0 0 1200 160" preserveAspectRatio="none">
+      <path class="draw terrain" d="M0 120 C120 100 200 130 320 110 S520 60 640 80 S880 140 1000 110 S1140 90 1200 100" />
+      <path class="draw road" d="M300 96 L420 78 L780 78 L900 96" />
+      <path class="draw slope" d="M300 96 L340 108 M900 96 L860 112" />
+      <path class="draw centre" d="M420 74 L780 74" />
+      <path class="draw hatch" d="M440 78 L430 92 M470 78 L460 92 M500 78 L490 92 M530 78 L520 92 M560 78 L550 92 M590 78 L580 92 M620 78 L610 92 M650 78 L640 92 M680 78 L670 92 M710 78 L700 92 M740 78 L730 92 M770 78 L760 92" />
+    </svg>
+  </div>
+</section>
+
+<section class="wrap block">
+  <h2 class="h2-rule">{{ h.forTitle }}</h2>
+  <div class="cards-3">
+    {%- for a in h.audiences %}
+    <article class="card-plain">
+      <h3>{{ a.h }}</h3>
+      <p>{{ a.p }}</p>
+    </article>
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <h2 class="h2-rule">{{ h.offersTitle }}</h2>
+    <div class="cards-2">
+      {%- for o in t.offers %}
+      <article class="card">
+        <p class="tag">{{ o.tag }}</p>
+        <h3><a href="{{ o.href }}">{{ o.h }}</a></h3>
+        <p>{{ o.p }}</p>
+        <a class="more" href="{{ o.href }}">{{ 'Mer om kurset' if lang == 'no' else 'More about this' }}</a>
+      </article>
+      {%- endfor %}
+    </div>
+    <p class="note">{{ t.common.noPrices }}</p>
+  </div>
+</section>
+
+<section class="wrap block why">
+  <div class="why-grid">
+    <div>
+      <h2 class="h2-rule">{{ h.whyTitle }}</h2>
+      {%- for p in h.why %}<p class="{{ 'big' if loop.first }}">{{ p }}</p>{% endfor %}
+      <a class="more" href="{{ '/om-patrick/' if lang == 'no' else '/en/about/' }}">{{ t.common.readStory }}</a>
+    </div>
+    <aside class="numbers" aria-label="{{ 'Nøkkeltall' if lang == 'no' else 'Key facts' }}">
+      <div><b>1988</b><span>{{ 'Vegplanlegger, Drammen' if lang == 'no' else 'Road designer, Drammen' }}</span></div>
+      <div><b>1993</b><span>{{ 'Vianova ringte' if lang == 'no' else 'Vianova called' }}</span></div>
+      <div><b>2015</b><span>{{ 'Styreleder ved salget til Trimble' if lang == 'no' else 'Chairman at the sale to Trimble' }}</span></div>
+      <div><b>2026</b><span>NovaCoach</span></div>
+    </aside>
+  </div>
+</section>
+
+<section class="wrap block form-block" id="interesse">
+  <h2 class="h2-rule">{{ h.formTitle }}</h2>
+  <p class="lead">{{ h.formLead }}</p>
+  {% include "form.njk" %}
+</section>

@@ -1,0 +1,63 @@
+{%- set t = tr[lang] -%}
+{%- set meta = t[pagekey].meta -%}
+<!doctype html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ meta.title }}</title>
+  <meta name="description" content="{{ meta.description }}">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <link rel="alternate" hreflang="{{ 'en' if lang == 'no' else 'no' }}" href="{{ site.url }}{{ alt }}">
+  <link rel="alternate" hreflang="{{ lang }}" href="{{ site.url }}{{ page.url }}">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="{{ meta.title }}">
+  <meta property="og:description" content="{{ meta.description }}">
+  <meta property="og:image" content="{{ site.url }}/img/patrick-640.jpg">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="page-{{ pagekey }}">
+<a class="skip" href="#main">{{ 'Hopp til innhold' if lang == 'no' else 'Skip to content' }}</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="{{ '/' if lang == 'no' else '/en/' }}" aria-label="NovaCoach">
+      <span class="brand-mark" aria-hidden="true"></span><span class="brand-name">Nova<b>Coach</b></span>
+    </a>
+    <nav class="nav" aria-label="{{ 'Hovedmeny' if lang == 'no' else 'Main menu' }}">
+      {%- if lang == 'no' -%}
+      <a href="/kurs/">{{ t.nav.kurs }}</a>
+      <a href="/coaching/">{{ t.nav.coaching }}</a>
+      <a href="/om-patrick/">{{ t.nav.om }}</a>
+      <a href="/kontakt/" class="nav-cta">{{ t.nav.kontakt }}</a>
+      {%- else -%}
+      <a href="/en/courses/">{{ t.nav.kurs }}</a>
+      <a href="/en/coaching/">{{ t.nav.coaching }}</a>
+      <a href="/en/about/">{{ t.nav.om }}</a>
+      <a href="/en/contact/" class="nav-cta">{{ t.nav.kontakt }}</a>
+      {%- endif -%}
+      <a href="{{ alt }}" class="lang" lang="{{ 'en' if lang == 'no' else 'no' }}" hreflang="{{ 'en' if lang == 'no' else 'no' }}">{{ t.nav.switch }}</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+{{ content | safe }}
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-col">
+      <span class="brand-name">Nova<b>Coach</b></span>
+      <p class="tagline">{{ t.footer.tagline }}</p>
+      <p><a href="mailto:{{ site.email }}">{{ site.email }}</a><br><a href="tel:{{ site.phoneHref }}">{{ site.phone }}</a><br><a href="{{ site.linkedin }}" rel="me noopener" target="_blank">{{ t.footer.linkedin }}</a></p>
+    </div>
+    <div class="footer-col small">
+      <p>{{ t.footer.legal | replace("{legalName}", site.legalName) | replace("{orgnr}", site.orgnr) | replace("{address}", site.address) }}</p>
+      <p>{{ t.footer.trademark }}</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
