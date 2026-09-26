@@ -36,3 +36,5 @@ src/img/                 photos
 - [ ] Search `tr.js` for `[bekreft]` / `[confirm]` and resolve each with Patrick.
 - [ ] Enable the testimonial block in `src/_includes/pages/om.njk` once a quote is approved.
 - [ ] Point novacoach.no DNS at Netlify.
+
+<!-- pipeline check -->
