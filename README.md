@@ -32,7 +32,6 @@ src/img/                 photos
 `data-netlify="true"` on the form means Netlify collects submissions. Set up email notifications in Netlify: Site → Forms → Notifications → add Patrick's email. Spam is filtered by the honeypot field plus Netlify's own filter.
 
 ## Before launch
-- [ ] `site.json`: confirm email (patrick@novacoach.no needs a mailbox or forward at Gigahost) and phone.
-- [ ] Search `tr.js` for `[bekreft]` / `[confirm]` and resolve each with Patrick.
+- [ ] `site.json`: swap patrickjmcgloin@outlook.com for patrick@novacoach.no once the mailbox exists; confirm phone.
 - [ ] Enable the testimonial block in `src/_includes/pages/om.njk` once a quote is approved.
 - [ ] Point novacoach.no DNS at Netlify.
