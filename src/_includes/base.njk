@@ -15,6 +15,8 @@
   <meta property="og:description" content="{{ meta.description }}">
   <meta property="og:image" content="{{ site.url }}/img/patrick-640.jpg">
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="{{ 'nb_NO' if lang == 'no' else 'en_GB' }}">
+  <meta property="og:locale:alternate" content="{{ 'en_GB' if lang == 'no' else 'nb_NO' }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -32,12 +34,12 @@
       <a href="/kurs/">{{ t.nav.kurs }}</a>
       <a href="/coaching/">{{ t.nav.coaching }}</a>
       <a href="/om-patrick/">{{ t.nav.om }}</a>
-      <a href="/kontakt/" class="nav-cta">{{ t.nav.kontakt }}</a>
+      <a href="/kontakt/" class="nav-cta btn btn-small">{{ t.nav.cta }}</a>
       {%- else -%}
       <a href="/en/courses/">{{ t.nav.kurs }}</a>
       <a href="/en/coaching/">{{ t.nav.coaching }}</a>
       <a href="/en/about/">{{ t.nav.om }}</a>
-      <a href="/en/contact/" class="nav-cta">{{ t.nav.kontakt }}</a>
+      <a href="/en/contact/" class="nav-cta btn btn-small">{{ t.nav.cta }}</a>
       {%- endif -%}
       <a href="{{ alt }}" class="lang" lang="{{ 'en' if lang == 'no' else 'no' }}" hreflang="{{ 'en' if lang == 'no' else 'no' }}">{{ t.nav.switch }}</a>
     </nav>
@@ -56,6 +58,7 @@
     <div class="footer-col small">
       <p>{{ t.footer.legal | replace("{legalName}", site.legalName) | replace("{orgnr}", site.orgnr) | replace("{address}", site.address) }}</p>
       <p>{{ t.footer.trademark }}</p>
+      <p><a href="{{ '/personvern/' if lang == 'no' else '/en/privacy/' }}">{{ t.common.privacyLink }}</a></p>
     </div>
   </div>
 </footer>

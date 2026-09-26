@@ -30,7 +30,7 @@
   <label>{{ f.message }}<textarea name="message" rows="5"></textarea></label>
   <div class="form-foot">
     <button type="submit" class="btn">{{ f.submit }}</button>
-    <p class="small">{{ t.common.responseNote }} {{ f.privacy }}</p>
+    <p class="small">{{ t.common.responseNote }} {{ f.privacy }} <a href="{{ '/personvern/' if lang == 'no' else '/en/privacy/' }}">{{ t.common.privacyLink }}</a>.</p>
   </div>
 </form>
 <script>

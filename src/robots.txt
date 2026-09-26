@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://novacoach.no/sitemap.xml

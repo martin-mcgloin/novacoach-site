@@ -55,7 +55,7 @@
         <p class="tag">{{ o.tag }}</p>
         <h3><a href="{{ o.href }}">{{ o.h }}</a></h3>
         <p>{{ o.p }}</p>
-        <a class="more" href="{{ o.href }}">{{ 'Mer om kurset' if lang == 'no' else 'More about this' }}</a>
+        <a class="more" href="{{ o.href }}">{{ t.common.readMore }}</a>
       </article>
       {%- endfor %}
     </div>

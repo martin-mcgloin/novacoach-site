@@ -1,0 +1,11 @@
+{%- set t = tr[lang] -%}
+{%- set o = t.personvern -%}
+<section class="wrap block page-head">
+  <h1>{{ o.h1 }}</h1>
+  <p class="lead">{{ o.lead }}</p>
+</section>
+<section class="wrap block story">
+  {%- for s in o.sections %}
+  <div class="story-row"><h2>{{ s.h }}</h2><p>{{ s.p }}</p></div>
+  {%- endfor %}
+</section>

@@ -2,14 +2,16 @@
 // Marked [bekreft]/[confirm] = needs Patrick's approval before launch.
 
 const no = {
-  nav: { home: "Hjem", kurs: "Kurs", coaching: "Coaching", om: "Om Patrick", kontakt: "Kontakt", switch: "English", switchHref: "/en/" },
+  nav: { cta: "Meld interesse", home: "Hjem", kurs: "Kurs", coaching: "Coaching", om: "Om Patrick", kontakt: "Kontakt", switch: "English", switchHref: "/en/" },
   common: {
     cta: "Meld interesse",
     ctaCourses: "Se kursene",
     responseNote: "Patrick svarer innen to virkedager.",
     noPrices: "Vi publiserer ikke priser ennå. Fortell oss hva dere trenger, så får dere et tilbud innen to virkedager.",
     readStory: "Les historien",
-    facts: ["40 år med veg", "Med Novapoint siden 1993", "Vi kommer til dere, i hele Europa"],
+    readMore: "Les mer",
+    privacyLink: "Personvern",
+    facts: ["40 år med veg", "Novapoint-bruker siden 1988", "Vi kommer til dere, i hele Europa"],
   },
   home: {
     meta: { title: "NovaCoach – Kurs og coaching i Novapoint og Quadri", description: "Kurs og coaching i Novapoint og Quadri på deres eget prosjekt, med Patrick Mc Gloin. Hos dere, i hele Europa." },
@@ -20,7 +22,7 @@ const no = {
     audiences: [
       { h: "Byggherrer og vegeiere", p: "Prosjekterende hos Statens vegvesen, fylkeskommuner og kommuner som skal levere modellbasert etter R110 Modellgrunnlag. Vi trener teamet på deres eget prosjekt, ikke på et demo-datasett." },
       { h: "Rådgivere", p: "Vegavdelinger som vil bruke mer av Novapoint enn de gjør i dag, og som vil at hele teamet jobber likt i Quadri. Kurs på huset, og coaching etterpå." },
-      { h: "Universiteter og høgskoler", p: "Studieprogram som underviser Novapoint hvert semester. Patrick kan overta og kjøre kurset for studentene, slik at fagansvarlig slipper å være programvareekspert." },
+      { h: "Universiteter og høgskoler", p: "Studieprogram som underviser Novapoint hvert semester. Patrick kan overta og kjøre kurset for studentene, slik at fagansvarlig kan bruke tiden på faget." },
     ],
     offersTitle: "Kurs og pakker",
     whyTitle: "Hvorfor Patrick?",
@@ -45,15 +47,15 @@ const no = {
     courses: [
       {
         id: "veg", h: "Novapoint Veg på eget prosjekt", tag: "2 dager · hos dere · for et vegteam",
-        intro: "Trimbles grunnkurs bruker et standard datasett. Dette kurset bruker vegen dere prosjekterer nå. Dere sender grunnlaget på forhånd, Patrick bygger øvingene på det, og etter to dager har teamet en ferdig modell av sitt eget prosjekt og en dypere forståelse av bredden i Novapoint.",
+        intro: "Et vanlig grunnkurs bruker et standard datasett. Dette kurset bruker vegen dere prosjekterer nå. Dere sender grunnlaget på forhånd, Patrick bygger øvingene på det, og etter to dager har teamet en ferdig modell av sitt eget prosjekt og en dypere forståelse av bredden i Novapoint.",
         learnTitle: "Dette jobber vi med",
         learn: ["Linjeføring og vertikalgeometri på deres egen linje", "Vegmodell: tverrprofil, overbygning og lag", "Detaljert 3D-kryss", "Skjæring og fylling med løsmasselag, og mengderapporter fordelt på jordart", "Konverteringsregler, og hvordan vegmodellen havner riktig i Quadri", "Tegningsproduksjon og leveranse etter R110 Modellgrunnlag", "Flere veier til samme mål: hvilket verktøy som passer når"],
         afterTitle: "Etter kurset",
         after: "Teamet kan ta deres egen veg fra linje til levert modell og mengderapport etter R110, på egen hånd.",
         needTitle: "Dette trenger vi fra dere",
-        need: ["Modell av eksisterende situasjon", "Terrengmodell", "Grunnlagsdata for prosjektet", "Sendt senest to uker før kurset [bekreft]"],
+        need: ["Modell av eksisterende situasjon", "Terrengmodell", "Grunnlagsdata for prosjektet", "Sendt senest to uker før kurset"],
         practicalTitle: "Praktisk",
-        practical: ["To dager hos dere, 09–16", "Best for et team på opptil åtte [bekreft]", "Deltakerne bruker egne maskiner og lisenser", "Oppfølging digitalt etterpå"],
+        practical: ["To dager hos dere, 09–16", "Best for et team på opptil åtte", "Deltakerne bruker egne maskiner og lisenser", "Oppfølging digitalt etterpå"],
       },
       {
         id: "quadri", h: "Quadri for prosjektteam", tag: "1 dag · hos dere · for BIM-koordinatorer og disiplinledere",
@@ -94,7 +96,7 @@ const no = {
     sections: [
       { h: "Papir og NovaCAD, Drammen 1988", p: "Patrick begynte som vegplanlegger på vegkontoret i Drammen i 1988. Vegdesign var manuelt, på papir. E18 gjennom Kobbervikdalen tegnet han for hånd. Men den digitale revolusjonen var i gang: Statens vegvesen hadde tatt i bruk den første versjonen av det som senere ble Novapoint, den gang NovaCAD. Som en av de nye på kontoret kastet han seg over den." },
       { h: "Vianova ringte, 1993", p: "Entusiasmen ble lagt merke til. I 1993 ringte Vianova Systems og spurte om han ville være med. Det ble en reise på over tjue år: daglig leder fra 2001, salgs- og markedsdirektør, fagansvarlig for Novapoint Veg, og styreleder da Trimble kjøpte selskapet i 2015. På slutten av 90-tallet etablerte han Vianovas kontor i Thailand." },
-      { h: "Brukermøtene", p: "Det han er stoltest av er brukermøtene. I mange år hadde han ansvaret for dem, og de bygde et fellesskap av vegplanleggere som delte beste praksis, ideer og entusiasme for faget. Da Jo Nesbø sto på scenen på brukermøtet i Molde, var det et tegn på hvor langt et norsk programvarehus for vegdesign hadde kommet. [bekreft]" },
+      { h: "Brukermøtene", p: "Det han er stoltest av er brukermøtene. I mange år hadde han ansvaret for dem, og de bygde et fellesskap av vegplanleggere som delte beste praksis, ideer og entusiasme for faget." },
       { h: "Trimble, 2015–2026", p: "Trimble var et stort steg: fra norsk programvarehus til en del av et globalt selskap. Trimble brakte også tanken om en hel livssyklus, fra prosjektering via bygging til forvaltning, drift og vedlikehold, og verdien av å forvalte modellen gjennom hele løpet. Patrick var europeisk løsningssjef, deretter produktdirektør for Novapoint, Quadri, Quantm og Geosuite." },
       { h: "NovaCoach, 2026", p: "«Jeg har så mye kunnskap jeg vil dele, og det har alltid vært den beste delen av jobben. Nå har jeg luksusen å bruke all tiden på å hjelpe kunder og nerde på produktet jeg var med på å skape. Pensjon handler om å gjøre det man liker, og å lære bort Novapoint har alltid vært en lidenskap.»" },
     ],
@@ -132,6 +134,19 @@ const no = {
     submit: "Send",
     privacy: "Vi bruker opplysningene kun til å svare deg. Ingen nyhetsbrev.",
   },
+  personvern: {
+    meta: { title: "Personvern – NovaCoach", description: "Hvordan NovaCoach behandler opplysningene du sender inn." },
+    h1: "Personvern",
+    lead: "Kort versjon: vi bruker det du sender oss til å svare deg, og ikke til noe annet.",
+    sections: [
+      { h: "Hva vi samler inn", p: "Når du sender inn skjemaet, lagrer vi navn, firma, e-post, eventuelt telefonnummer, hva du er interessert i, hvor du holder til, og meldingen din. Nettsiden bruker ingen informasjonskapsler og ingen sporing." },
+      { h: "Hvorfor", p: "For å svare på henvendelsen din og, hvis dere ønsker det, sende et tilbud. Behandlingsgrunnlaget er berettiget interesse i å besvare en henvendelse du selv har sendt." },
+      { h: "Hvor lenge", p: "Henvendelser lagres i skjemaverktøyet til Netlify, som drifter nettsiden, og slettes senest tolv måneder etter siste kontakt, med mindre det er blitt et kundeforhold. Da gjelder ordinær regnskapslovgivning." },
+      { h: "Hvem", p: "Behandlingsansvarlig er PLATANUS AS, org.nr 925 510 483, Oslo. Netlify, Inc. er databehandler for skjemainnsendinger. Vi deler ikke opplysningene med andre." },
+      { h: "Dine rettigheter", p: "Du kan be om innsyn, retting eller sletting når som helst ved å sende en e-post til adressen i bunnen av siden. Du kan også klage til Datatilsynet." },
+    ],
+  },
+  notfound: { meta: { title: "Siden finnes ikke – NovaCoach", description: "404" }, h1: "Den siden finnes ikke.", p: "Kanskje linjeføringen var feil. Prøv forsiden.", back: "Til forsiden" },
   footer: {
     tagline: "Unleash the potential of those around you.",
     legal: "NovaCoach er en tjeneste levert av {legalName}, org.nr {orgnr}, {address}.",
@@ -141,14 +156,16 @@ const no = {
 };
 
 const en = {
-  nav: { home: "Home", kurs: "Courses", coaching: "Coaching", om: "About Patrick", kontakt: "Contact", switch: "Norsk", switchHref: "/" },
+  nav: { cta: "Register interest", home: "Home", kurs: "Courses", coaching: "Coaching", om: "About Patrick", kontakt: "Contact", switch: "Norsk", switchHref: "/" },
   common: {
     cta: "Register interest",
     ctaCourses: "See the courses",
     responseNote: "Patrick replies within two working days.",
     noPrices: "We are not publishing prices yet. Tell us what you need and you will have a proposal within two working days.",
     readStory: "Read the story",
-    facts: ["40 years of roads", "With Novapoint since 1993", "We come to you, anywhere in Europe"],
+    readMore: "Read more",
+    privacyLink: "Privacy",
+    facts: ["40 years of roads", "Novapoint user since 1988", "We come to you, anywhere in Europe"],
   },
   home: {
     meta: { title: "NovaCoach – Novapoint and Quadri training and coaching", description: "Novapoint and Quadri training and coaching on your own project, with Patrick Mc Gloin. On site, anywhere in Europe." },
@@ -157,9 +174,9 @@ const en = {
     lead: "Patrick Mc Gloin has worked with Novapoint since it was called NovaCAD. He helped build the tools. Now he comes to you and shows how to use them on the road you are actually designing.",
     forTitle: "Who is this for?",
     audiences: [
-      { h: "Road owners and public clients", p: "Designers at road authorities, counties and municipalities who must deliver model-based projects under national requirements such as Norway's R110. We train the team on your own project, not on a demo dataset." },
+      { h: "Road authorities and public clients", p: "Designers at road authorities, counties and municipalities who must deliver model-based projects under national requirements such as Norway's R110. We train the team on your own project, not on a demo dataset." },
       { h: "Consultancies", p: "Road departments that want to use more of Novapoint than they do today, and want the whole team working the same way in Quadri. A course in-house, and coaching afterwards." },
-      { h: "Universities and colleges", p: "Civil engineering programmes that teach Novapoint every semester. Patrick can run the course for your students, so the lecturer does not have to be the software expert." },
+      { h: "Universities and colleges", p: "Civil engineering programmes that teach Novapoint every semester. Patrick can run the course for your students, so the lecturer can spend the time on the subject." },
     ],
     offersTitle: "Courses and packages",
     whyTitle: "Why Patrick?",
@@ -172,7 +189,7 @@ const en = {
     formLead: "Tell us a little about your team and Patrick will be in touch within two working days.",
   },
   offers: [
-    { key: "veg", h: "Novapoint Road on your own project", tag: "2 days · on site", p: "After two days your team can take your own road from alignment to a delivered model and quantity report, without having to ask anyone. Detailed 3D intersections, model-based workflow, and the hundreds of functions you did not know were there.", href: "/en/courses/#veg" },
+    { key: "veg", h: "Novapoint Road on your own project", tag: "2 days · on site", p: "After two days your team can take your own road from alignment to a delivered model and quantity report, on your own. Detailed 3D intersections, model-based workflow, and the hundreds of functions you did not know were there.", href: "/en/courses/#veg" },
     { key: "coaching", h: "Team coaching on your own project", tag: "Package · online or on site", p: "Tips and tricks, data management, workflow and collaboration in Quadri. For the whole team, while the project is running. You share your screen and model, Patrick guides.", href: "/en/coaching/" },
     { key: "student", h: "Novapoint course for students", tag: "Per semester · on campus", p: "Patrick runs the Novapoint teaching for your students, on the institution's licences and labs, with exercises updated for the current version.", href: "/en/courses/#student" },
     { key: "quadri", h: "Quadri for project teams", tag: "1 day · on site", p: "Model setup, tasks and roles, presentations, conversion rules, quantities in table view and sharing to the field. For BIM coordinators and discipline leads.", href: "/en/courses/#quadri" },
@@ -184,15 +201,15 @@ const en = {
     courses: [
       {
         id: "veg", h: "Novapoint Road on your own project", tag: "2 days · on site · for a road design team",
-        intro: "The standard beginner's course uses a demo dataset. This course uses the road you are designing now. You send the base data in advance, Patrick builds the exercises on it, and after two days the team has a finished model of its own project and a much deeper understanding of what Novapoint can do.",
+        intro: "A typical beginner's course uses a demo dataset. This course uses the road you are designing now. You send the base data in advance, Patrick builds the exercises on it, and after two days the team has a finished model of its own project and a much deeper understanding of what Novapoint can do.",
         learnTitle: "What we work on",
         learn: ["Horizontal and vertical alignment on your own centre line", "Road model: cross section, pavement and layers", "Detailed 3D intersection design", "Cut and fill with soil layers, and quantity reports split by soil type", "Conversion rules, and how the road model lands correctly in Quadri", "Drawing production and delivery under national model requirements (R110 in Norway)", "Several paths to the same result: which tool fits when"],
         afterTitle: "After the course",
         after: "The team can take your own road from alignment to a delivered model and quantity report, on its own.",
         needTitle: "What we need from you",
-        need: ["Existing-situation model", "Terrain model", "Base data for the project", "Sent at least two weeks before the course [confirm]"],
+        need: ["Existing-situation model", "Terrain model", "Base data for the project", "Sent at least two weeks before the course"],
         practicalTitle: "Practical",
-        practical: ["Two days at your office, 09–16", "Best for a team of up to eight [confirm]", "Participants use their own machines and licences", "Online follow-up afterwards"],
+        practical: ["Two days at your office, 09–16", "Best for a team of up to eight", "Participants use their own machines and licences", "Online follow-up afterwards"],
       },
       {
         id: "quadri", h: "Quadri for project teams", tag: "1 day · on site · for BIM coordinators and discipline leads",
@@ -233,7 +250,7 @@ const en = {
     sections: [
       { h: "Paper and NovaCAD, Drammen 1988", p: "Patrick started as a road designer at the Norwegian Public Roads Administration's office in Drammen in 1988. Road design was manual, on paper. He drew the E18 through Kobbervikdalen by hand. But the digital revolution had begun: the administration had adopted the first version of what later became Novapoint, then called NovaCAD. As one of the new people in the office, he threw himself at it." },
       { h: "Vianova called, 1993", p: "The enthusiasm was noticed. In 1993 Vianova Systems called and asked him to join. It became a journey of more than twenty years: CEO from 2001, director of sales and marketing, domain lead for Novapoint Road, and chairman of the board when Trimble bought the company in 2015. In the late 1990s he set up Vianova's office in Thailand." },
-      { h: "The user conferences", p: "What he is proudest of is the brukermøter, the annual Novapoint user conferences. For years he ran them, and they built a community of road designers who shared best practice, ideas and enthusiasm for the craft. When Jo Nesbø took the stage at the conference in Molde, it was a sign of how far a Norwegian road design software house had come. [confirm]" },
+      { h: "The user conferences", p: "What he is proudest of is the brukermøter, the annual Novapoint user conferences. For years he ran them, and they built a community of road designers who shared best practice, ideas and enthusiasm for the craft." },
       { h: "Trimble, 2015–2026", p: "Trimble was a big step: from a Norwegian software house to part of a global company. Trimble also brought the idea of a full lifecycle, from design through construction to operation and maintenance, and the value of managing the model through the whole of it. Patrick was European solution sales manager, then product director for Novapoint, Quadri, Quantm and Geosuite." },
       { h: "NovaCoach, 2026", p: "\"I have so much knowledge I want to share, and that was always the best part of the job. Now I have the luxury of spending all my time helping customers and nerding out on the product I helped create. Retirement is about doing what you love, and teaching Novapoint has always been a passion.\"" },
     ],
@@ -271,6 +288,19 @@ const en = {
     submit: "Send",
     privacy: "We use your details only to reply to you. No newsletter.",
   },
+  personvern: {
+    meta: { title: "Privacy – NovaCoach", description: "How NovaCoach handles the details you send us." },
+    h1: "Privacy",
+    lead: "Short version: we use what you send us to reply to you, and for nothing else.",
+    sections: [
+      { h: "What we collect", p: "When you submit the form we store your name, company, email, phone number if given, what you are interested in, where you are based, and your message. The site uses no cookies and no tracking." },
+      { h: "Why", p: "To answer your enquiry and, if you want one, to send a proposal. The legal basis is our legitimate interest in replying to a message you sent us." },
+      { h: "How long", p: "Enquiries are stored in the form tool of Netlify, which hosts the site, and deleted no later than twelve months after the last contact, unless it has become a customer relationship, in which case ordinary accounting rules apply." },
+      { h: "Who", p: "The data controller is PLATANUS AS, org. no. 925 510 483, Oslo, Norway. Netlify, Inc. processes form submissions on our behalf. We do not share your details with anyone else." },
+      { h: "Your rights", p: "You can ask for access, correction or deletion at any time by emailing the address in the footer. You can also complain to the Norwegian Data Protection Authority (Datatilsynet)." },
+    ],
+  },
+  notfound: { meta: { title: "Page not found – NovaCoach", description: "404" }, h1: "That page does not exist.", p: "Perhaps the alignment was off. Try the front page.", back: "Back to the front page" },
   footer: {
     tagline: "Unleash the potential of those around you.",
     legal: "NovaCoach is a service delivered by {legalName}, org. no. {orgnr}, {address}.",
