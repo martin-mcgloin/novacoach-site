@@ -1,0 +1,102 @@
+/* Design concepts. A = base (style.css). B and C override tokens and a few shapes.
+   Applied via <html data-concept="a|b|c">, chosen on the front page, remembered in localStorage. */
+
+/* ---------- B: Asfalt. Dark, high contrast, grotesk headings ---------- */
+:root[data-concept="b"] {
+  --paper: #0f1115; --paper-2: #171a21; --ink: #f4f1ea; --ink-2: #d5d0c4; --muted: #9aa3b2;
+  --line: #2a2f3a; --white: #171a21; --yellow: #f5c518; --yellow-ink: #f5c518;
+  --serif: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+  --r: 4px;
+}
+:root[data-concept="b"] h1, :root[data-concept="b"] h2, :root[data-concept="b"] h3, :root[data-concept="b"] .brand-name, :root[data-concept="b"] .numbers b, :root[data-concept="b"] .timeline dt, :root[data-concept="b"] .story h2 { font-family: var(--serif); font-weight: 700; letter-spacing: -0.025em; }
+:root[data-concept="b"] h1 { font-size: clamp(2.6rem, 6.2vw, 4.4rem); line-height: 1.02; text-transform: none; }
+:root[data-concept="b"] .big, :root[data-concept="b"] .tagline, :root[data-concept="b"] .quote { font-family: var(--sans); }
+:root[data-concept="b"] .eyebrow { color: var(--yellow); }
+:root[data-concept="b"] .btn { background: var(--yellow); color: #0f1115; border-color: var(--yellow); }
+:root[data-concept="b"] .btn:hover { background: #ffd53a; color: #0f1115; }
+:root[data-concept="b"] .btn-ghost { background: transparent; color: var(--ink); border-color: var(--line); }
+:root[data-concept="b"] .brand-mark { background: var(--yellow); }
+:root[data-concept="b"] .brand-mark::after { background: repeating-linear-gradient(90deg, #0f1115 0 6px, transparent 6px 10px); }
+:root[data-concept="b"] .site-header { background: rgba(15,17,21,.85); }
+:root[data-concept="b"] .hero-photo img { border-radius: 0; border-bottom: 6px solid var(--yellow); box-shadow: none; filter: contrast(1.05); }
+:root[data-concept="b"] .hero-photo::before { display: none; }
+:root[data-concept="b"] .card { background: var(--paper-2); border-color: var(--line); }
+:root[data-concept="b"] .card:hover { box-shadow: 0 0 0 1px var(--yellow); transform: none; }
+:root[data-concept="b"] .card-plain h3::before { background: var(--yellow); }
+:root[data-concept="b"] .section-drawing .draw { stroke: var(--ink-2); }
+:root[data-concept="b"] .section-drawing .fillbody { fill: var(--paper-2); }
+:root[data-concept="b"] .course-aside { background: var(--paper-2); }
+:root[data-concept="b"] .form input, :root[data-concept="b"] .form textarea { background: var(--paper-2); }
+:root[data-concept="b"] .site-footer { background: #0a0c10; }
+:root[data-concept="b"] .h2-rule::after { background: var(--yellow); width: 64px; }
+
+/* ---------- C: Nordisk. Light, rounded, sans throughout, signal orange ---------- */
+:root[data-concept="c"] {
+  --paper: #ffffff; --paper-2: #f3f6f9; --ink: #1d2733; --ink-2: #3a4a5c; --muted: #6b7a8b;
+  --line: #e2e8ee; --white: #ffffff; --yellow: #e8672c; --yellow-ink: #c2521c;
+  --serif: "Manrope", "Helvetica Neue", Arial, sans-serif;
+  --sans: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
+  --r: 18px;
+}
+:root[data-concept="c"] body { font-size: 18px; }
+:root[data-concept="c"] h1, :root[data-concept="c"] h2, :root[data-concept="c"] h3, :root[data-concept="c"] .brand-name, :root[data-concept="c"] .numbers b, :root[data-concept="c"] .timeline dt, :root[data-concept="c"] .story h2 { font-family: var(--serif); font-weight: 700; letter-spacing: -0.02em; }
+:root[data-concept="c"] .big, :root[data-concept="c"] .quote { font-family: var(--serif); font-weight: 500; }
+:root[data-concept="c"] .tagline { font-family: var(--sans); font-style: normal; }
+:root[data-concept="c"] .btn { border-radius: 999px; padding: .85em 1.6em; }
+:root[data-concept="c"] .btn-small { padding: .5em 1.1em; }
+:root[data-concept="c"] .lang { border-radius: 999px; }
+:root[data-concept="c"] .brand-mark { border-radius: 50%; background: var(--yellow); }
+:root[data-concept="c"] .brand-mark::after { background: #fff; border-radius: 2px; }
+:root[data-concept="c"] .hero { background: var(--paper-2); padding-bottom: 0; }
+:root[data-concept="c"] .hero-photo img { border-radius: 28px; box-shadow: 0 24px 50px -24px rgba(29,39,51,.35); }
+:root[data-concept="c"] .hero-photo::before { display: none; }
+:root[data-concept="c"] .section-drawing { border-bottom: 0; background: var(--paper-2); margin-top: 2rem; padding-bottom: 1rem; }
+:root[data-concept="c"] .section-drawing .draw { stroke: var(--ink-2); }
+:root[data-concept="c"] .section-drawing .fillbody { fill: #fff; }
+:root[data-concept="c"] .card { border: 0; box-shadow: 0 10px 30px -18px rgba(29,39,51,.25); padding: 2rem; }
+:root[data-concept="c"] .card:hover { box-shadow: 0 18px 40px -20px rgba(29,39,51,.35); }
+:root[data-concept="c"] .band { background: var(--paper-2); border: 0; }
+:root[data-concept="c"] .h2-rule::after { background: var(--yellow); width: 48px; height: 5px; border-radius: 3px; }
+:root[data-concept="c"] .card-plain h3::before { border-radius: 2px; }
+:root[data-concept="c"] .ticks li::before { border-radius: 2px; }
+:root[data-concept="c"] .course-aside { border: 0; box-shadow: 0 10px 30px -18px rgba(29,39,51,.25); }
+:root[data-concept="c"] .form input, :root[data-concept="c"] .form textarea { border-radius: 12px; background: var(--paper-2); border-color: transparent; }
+:root[data-concept="c"] .form input:focus, :root[data-concept="c"] .form textarea:focus { background: #fff; }
+:root[data-concept="c"] .share { border-radius: 12px; }
+:root[data-concept="c"] .site-footer { background: var(--ink); color: #dfe6ee; border: 0; }
+:root[data-concept="c"] .site-footer a, :root[data-concept="c"] .site-footer .tagline, :root[data-concept="c"] .site-footer .brand-name { color: #fff; }
+:root[data-concept="c"] .site-footer .small p { color: #b7c2ce; }
+:root[data-concept="c"] .facts li::before { content: "● "; font-size: .6em; vertical-align: middle; }
+
+/* ---------- Concept picker (front page, first visit) ---------- */
+.concept-picker { position: fixed; inset: 0; z-index: 50; background: var(--paper); color: var(--ink); overflow: auto; display: grid; place-items: center; padding: 2rem 16px; }
+.concept-picker[hidden] { display: none; }
+.concept-picker .inner { max-width: 960px; width: 100%; }
+.concept-picker h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: .3em; }
+.concept-picker .lead { margin-bottom: 2rem; }
+.concept-grid { display: grid; gap: 1.2rem; }
+@media (min-width: 720px) { .concept-grid { grid-template-columns: repeat(3, 1fr); } }
+.concept-card { border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: var(--white); text-align: left; padding: 0; cursor: pointer; font: inherit; color: inherit; transition: transform .15s, box-shadow .15s; }
+.concept-card:hover { transform: translateY(-2px); box-shadow: 0 18px 40px -24px rgba(0,0,0,.4); }
+.concept-card .swatch { height: 96px; display: grid; grid-template-rows: 1fr auto; }
+.concept-card .swatch span { display: block; }
+.concept-card .swatch .s1 { }
+.concept-card .swatch .s2 { height: 10px; }
+.concept-card .body { padding: 1rem 1.1rem 1.2rem; }
+.concept-card .body b { display: block; font-family: var(--serif); font-size: 1.2rem; margin-bottom: .3em; }
+.concept-card .body p { margin: 0 0 .8em; font-size: .95rem; color: var(--muted); }
+.concept-card .body .pick { font-weight: 600; }
+.concept-card .body .pick::after { content: " \2192"; }
+.sw-a .s1 { background: #f6f3ec; border-bottom: 3px dashed #f2c230; } .sw-a .s2 { background: #14243a; }
+.sw-b .s1 { background: #0f1115; border-bottom: 3px solid #f5c518; } .sw-b .s2 { background: #171a21; }
+.sw-c .s1 { background: #f3f6f9; border-bottom: 3px solid #e8672c; } .sw-c .s2 { background: #1d2733; }
+.sw-a .s1 { font-family: "Fraunces", serif; } .sw-b .s1 { font-family: "Bricolage Grotesque", sans-serif; } .sw-c .s1 { font-family: "Manrope", sans-serif; }
+.concept-card .swatch .s1 { display: flex; align-items: center; padding: 0 1.1rem; font-size: 1.6rem; font-weight: 600; }
+.sw-a .s1 { color: #14243a; } .sw-b .s1 { color: #f4f1ea; } .sw-c .s1 { color: #1d2733; }
+
+/* ---------- Floating switcher (all pages) ---------- */
+.concept-switch { position: fixed; right: 12px; bottom: 12px; z-index: 40; display: flex; align-items: center; gap: .3rem; background: var(--white); border: 1px solid var(--line); border-radius: 999px; padding: .3rem .4rem .3rem .8rem; font-size: .8rem; color: var(--muted); box-shadow: 0 10px 30px -14px rgba(0,0,0,.4); }
+.concept-switch button { font: inherit; font-weight: 700; width: 28px; height: 28px; border-radius: 50%; border: 1px solid var(--line); background: transparent; color: var(--ink); cursor: pointer; }
+.concept-switch button[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+:root[data-concept="b"] .concept-switch button[aria-pressed="true"] { background: var(--yellow); color: #0f1115; border-color: var(--yellow); }
+@media print { .concept-switch, .concept-picker { display: none; } }

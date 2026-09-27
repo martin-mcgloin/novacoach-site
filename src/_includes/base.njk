@@ -10,17 +10,19 @@
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
   <link rel="alternate" hreflang="{{ 'en' if lang == 'no' else 'no' }}" href="{{ site.url }}{{ alt }}">
   <link rel="alternate" hreflang="{{ lang }}" href="{{ site.url }}{{ page.url }}">
+  <script>(function(){try{var q=new URLSearchParams(location.search).get('concept');var c=q||localStorage.getItem('nc-concept');if(c&&/^[abc]$/.test(c)){document.documentElement.setAttribute('data-concept',c);if(q)localStorage.setItem('nc-concept',c);}}catch(e){}})();</script>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <meta property="og:title" content="{{ meta.title }}">
   <meta property="og:description" content="{{ meta.description }}">
-  <meta property="og:image" content="{{ site.url }}/img/patrick-640.jpg">
+  <meta property="og:image" content="{{ site.url }}/img/patrick-hero-640.jpg">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="{{ 'nb_NO' if lang == 'no' else 'en_GB' }}">
   <meta property="og:locale:alternate" content="{{ 'en_GB' if lang == 'no' else 'nb_NO' }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Manrope:wght@500;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/concepts.css">
 </head>
 <body class="page-{{ pagekey }}">
 <a class="skip" href="#main">{{ 'Hopp til innhold' if lang == 'no' else 'Skip to content' }}</a>
@@ -45,9 +47,41 @@
     </nav>
   </div>
 </header>
+{%- if pagekey == 'home' %}
+<section class="concept-picker" id="concept-picker" hidden aria-label="{{ t.common.concepts.title }}">
+  <div class="inner">
+    <h1>{{ t.common.concepts.title }}</h1>
+    <p class="lead">{{ t.common.concepts.lead }}</p>
+    <div class="concept-grid">
+      {%- for o in t.common.concepts.options %}
+      <button type="button" class="concept-card sw-{{ o.key }}" data-pick="{{ o.key }}">
+        <span class="swatch"><span class="s1">NovaCoach</span><span class="s2"></span></span>
+        <span class="body"><b>{{ o.key | upper }} · {{ o.name }}</b><p>{{ o.p }}</p><span class="pick">{{ t.common.concepts.pick }}</span></span>
+      </button>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+{%- endif %}
 <main id="main">
 {{ content | safe }}
 </main>
+<div class="concept-switch" role="group" aria-label="{{ t.common.concepts.switch }}"><span>{{ t.common.concepts.switch }}</span>
+  <button type="button" data-pick="a" aria-pressed="false">A</button><button type="button" data-pick="b" aria-pressed="false">B</button><button type="button" data-pick="c" aria-pressed="false">C</button>
+</div>
+<script>
+(function(){
+  var root=document.documentElement, picker=document.getElementById('concept-picker');
+  function current(){return root.getAttribute('data-concept')||'a';}
+  function apply(c){root.setAttribute('data-concept',c);try{localStorage.setItem('nc-concept',c);}catch(e){}
+    document.querySelectorAll('.concept-switch button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.pick===c?'true':'false');});
+    if(picker){picker.hidden=true;}}
+  var chosen=null;try{chosen=localStorage.getItem('nc-concept');}catch(e){}
+  if(!root.getAttribute('data-concept')){ if(picker&&!chosen){picker.hidden=false;} else {root.setAttribute('data-concept','a');} }
+  document.querySelectorAll('.concept-switch button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.pick===current()?'true':'false');});
+  document.querySelectorAll('[data-pick]').forEach(function(el){el.addEventListener('click',function(){apply(el.dataset.pick);});});
+})();
+</script>
 <footer class="site-footer">
   <div class="wrap footer-inner">
     <div class="footer-col">
