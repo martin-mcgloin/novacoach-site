@@ -11,7 +11,6 @@ const no = {
     readStory: "Les historien",
     readMore: "Les mer",
     privacyLink: "Personvern",
-    concepts: { title: "Velg et designkonsept", lead: "Arbeidsversjon. Samme innhold, tre uttrykk. Velg ett, se rundt, og bytt når som helst nederst på siden.", pick: "Velg", switch: "Konsept", options: [ { key: "a", name: "Tegnekontoret", p: "Papir, mørk blå, gul midtlinje. Rolig og senior." }, { key: "b", name: "Asfalt", p: "Mørk, kontrastrik, tydelig. Moderne og teknisk." }, { key: "c", name: "Nordisk", p: "Lys, luftig, avrundet. Vennlig og enkel." } ] },
     facts: ["40 år med veg", "Novapoint-bruker siden 1988", "Vi kommer til dere, i hele Europa"],
   },
   home: {
@@ -25,6 +24,12 @@ const no = {
       { h: "Rådgivere", p: "Dypdykk i vegmodellering. Fokus på egenskaper på objekter og sømløs dataflyt fra prosjektering til bygging." },
       { h: "Universiteter og høgskoler", p: "Studieprogram som underviser i veg- og jernbaneprosjektering i Novapoint. Patrick kan kjøre kurset for studentene, slik at fagansvarlig kan bruke tiden på faget. Egen timerate gjelder." },
     ],
+    modelsTitle: "Fra normalprofil til 3D-modell",
+    modelsLead: "Kursene handler om det som faktisk skal bygges: linjeføring, normalprofil, kryss og mengder. To utsnitt fra en vegmodell laget i Novapoint.",
+    models: {
+      roundabout: { alt: "3D-visning av en rundkjøring med fire armer og en trerekke langs vegen.", caption: "Rundkjøring med tilfarter, i 3D." },
+      section: { alt: "Tverrprofil av en tofelts veg med kjørefeltbredder, skuldre, tverrfall og lag i overbygningen.", caption: "Normalprofil med kjørefelt, skuldre, tverrfall og overbygning." },
+    },
     offersTitle: "Kurs og pakker",
     whyTitle: "Hvorfor Patrick?",
     why: [
@@ -166,7 +171,6 @@ const en = {
     readStory: "Read the story",
     readMore: "Read more",
     privacyLink: "Privacy",
-    concepts: { title: "Pick a design concept", lead: "Work in progress. Same content, three expressions. Pick one, look around, and switch any time at the bottom of the page.", pick: "Choose", switch: "Concept", options: [ { key: "a", name: "The drawing office", p: "Paper, deep blue, yellow centre line. Calm and senior." }, { key: "b", name: "Asphalt", p: "Dark, high contrast, direct. Modern and technical." }, { key: "c", name: "Nordic", p: "Light, airy, rounded. Friendly and simple." } ] },
     facts: ["40 years of roads", "Novapoint user since 1988", "We come to you, anywhere in Europe"],
   },
   home: {
@@ -180,6 +184,12 @@ const en = {
       { h: "Consultancies", p: "A deep dive into road modelling. Focus on object properties and a seamless flow of data from design to construction." },
       { h: "Universities and colleges", p: "Programmes that teach road and railway design in Novapoint. Patrick can run the course for your students, so the lecturer can spend the time on the subject. A separate hourly rate applies." },
     ],
+    modelsTitle: "From cross section to 3D model",
+    modelsLead: "The courses are about what actually gets built: alignment, cross section, junctions and quantities. Two views from a road model made in Novapoint.",
+    models: {
+      roundabout: { alt: "3D view of a roundabout with four arms and a row of trees along the road.", caption: "Roundabout with its approach roads, in 3D." },
+      section: { alt: "Cross section of a two-lane road showing lane widths, shoulders, crossfall and pavement layers.", caption: "Typical cross section with lanes, shoulders, crossfall and pavement layers." },
+    },
     offersTitle: "Courses and packages",
     whyTitle: "Why Patrick?",
     why: [

@@ -2,7 +2,7 @@
 
 Website for NovaCoach: Novapoint and Quadri training and coaching by Patrick Mc Gloin, delivered by PLATANUS AS.
 
-Static site built with [Eleventy](https://www.11ty.dev/) and hosted on Netlify. Every push to `main` deploys automatically. Norwegian at `/`, English at `/en/`.
+Static site built with [Eleventy](https://www.11ty.dev/) and hosted on Netlify. Every push to `main` deploys automatically and uses Netlify build credits, so batch changes and push once per round rather than per edit. Norwegian at `/`, English at `/en/`.
 
 ## Edit the words
 All copy lives in `src/_data/tr.js`, one object per language (`no`, `en`). Templates never contain sentences. Change a sentence there, commit, and Netlify redeploys.
@@ -24,8 +24,8 @@ src/_includes/base.njk   layout, header, footer
 src/_includes/form.njk   interest form (Netlify Forms)
 src/_includes/pages/     one template per page type, shared by both languages
 src/no/, src/en/         thin page stubs: URL, page type, link to the other language
-src/css/style.css        styles
-src/img/                 photos
+src/css/style.css        styles (design: dark "Asfalt" concept)
+src/img/                 photos and road-model images
 ```
 
 ## Form
