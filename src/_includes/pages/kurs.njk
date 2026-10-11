@@ -24,7 +24,7 @@
       <ul>{% for i in c.need %}<li>{{ i }}</li>{% endfor %}</ul>
       <h3>{{ c.practicalTitle }}</h3>
       <ul>{% for i in c.practical %}<li>{{ i }}</li>{% endfor %}</ul>
-      <a class="btn" href="{{ '/kontakt/' if lang == 'no' else '/en/contact/' }}">{{ t.common.cta }}</a>
+      <a class="btn" href="{{ '/kontakt/' if lang == 'no' else '/en/contact/' }}?kurs={{ c.id }}">{{ t.common.cta }}</a>
     </aside>
   </div>
 </section>

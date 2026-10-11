@@ -34,5 +34,5 @@
   </div>
 </form>
 <script>
-(function(){var w=document.getElementById('share-wrap');if(!w)return;var r=document.querySelectorAll('input[name="offer"]');function u(){var on=false;r.forEach(function(x){if(x.checked&&x.dataset.flagship==='true')on=true;});w.hidden=!on;}r.forEach(function(x){x.addEventListener('change',u);});u();})();
+(function(){var w=document.getElementById('share-wrap');if(!w)return;var r=document.querySelectorAll('input[name="offer"]');function u(){var on=false;r.forEach(function(x){if(x.checked&&x.dataset.flagship==='true')on=true;});w.hidden=!on;}r.forEach(function(x){x.addEventListener('change',u);});var k=['veg','coaching','student','quadri'].indexOf(new URLSearchParams(location.search).get('kurs'));if(k>-1&&r[k])r[k].checked=true;u();})();
 </script>
