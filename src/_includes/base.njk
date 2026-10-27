@@ -10,7 +10,10 @@
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
   <link rel="alternate" hreflang="{{ 'en' if lang == 'no' else 'no' }}" href="{{ site.url }}{{ alt }}">
   <link rel="alternate" hreflang="{{ lang }}" href="{{ site.url }}{{ page.url }}">
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="theme-color" content="#f4f1ea">
   <meta property="og:title" content="{{ meta.title }}">
   <meta property="og:description" content="{{ meta.description }}">
   <meta property="og:image" content="{{ site.url }}/img/patrick-hero-640.jpg">
@@ -19,7 +22,7 @@
   <meta property="og:locale:alternate" content="{{ 'en_GB' if lang == 'no' else 'nb_NO' }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..110,500..700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body class="page-{{ pagekey }}">
@@ -27,7 +30,7 @@
 <header class="site-header">
   <div class="wrap header-inner">
     <a class="brand" href="{{ '/' if lang == 'no' else '/en/' }}" aria-label="NovaCoach">
-      <span class="brand-mark" aria-hidden="true"></span><span class="brand-name">Nova<b>Coach</b></span>
+      <svg class="brand-mark" viewBox="10 9 44 46" aria-hidden="true"><path class="road" d="M18 53V17l28 30V11"/><path class="cl" d="M18 53V17l28 30V11"/></svg><span class="brand-name">NovaCoach</span>
     </a>
     <nav class="nav" aria-label="{{ 'Hovedmeny' if lang == 'no' else 'Main menu' }}">
       {%- if lang == 'no' -%}
@@ -48,10 +51,10 @@
 <main id="main">
 {{ content | safe }}
 </main>
-<footer class="site-footer">
+<footer class="site-footer on-asfalt">
   <div class="wrap footer-inner">
     <div class="footer-col">
-      <span class="brand-name">Nova<b>Coach</b></span>
+      <span class="brand footer-brand"><svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><rect class="plate" width="64" height="64" rx="12"/><path class="road" d="M18 53V17l28 30V11"/><path class="cl" d="M18 53V17l28 30V11"/></svg><span class="brand-name">NovaCoach</span></span>
       <p class="tagline">{{ t.footer.tagline }}</p>
       <p><a href="mailto:{{ site.email }}">{{ site.email }}</a><br><a href="tel:{{ site.phoneHref }}">{{ site.phone }}</a><br><a href="{{ site.linkedin }}" rel="me noopener" target="_blank">{{ t.footer.linkedin }}</a></p>
     </div>
