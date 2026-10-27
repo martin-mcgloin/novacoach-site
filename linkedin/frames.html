@@ -1,0 +1,258 @@
+<!doctype html>
+<!-- LinkedIn launch visuals for NovaCoach. Rendered to PNG by render.js: frames.html?f=<frame>&lang=<no|en>.
+     Same tokens as src/css/style.css: paper, asphalt ink, one yellow centre line. -->
+<html>
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #f4f1ea; --paper-3: #ebe7de; --ink: #16191d; --ink-2: #3b4148; --muted: #5f666e; --line: #d9d4c9;
+  --asfalt: #14171b; --road: #1b1f24; --road-dark: #2c3138; --on-dark: #f4f1ea; --on-dark-2: #c9c4b9; --yellow: #f0c43c;
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --sans: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: var(--paper); }
+body { font-family: var(--sans); color: var(--ink); -webkit-font-smoothing: antialiased; }
+.frame { position: relative; overflow: hidden; display: none; }
+.frame.on { display: block; }
+.dark { background: var(--asfalt); color: var(--on-dark); }
+.paper { background: var(--paper); }
+svg { display: block; }
+.d { font-family: var(--display); font-stretch: 108%; letter-spacing: -0.02em; }
+
+/* Logo lockup: the N is a road with a yellow centre line */
+.lockup { display: flex; align-items: center; gap: .32em; font-family: var(--display); font-weight: 640; font-stretch: 108%; letter-spacing: -0.012em; line-height: 1; }
+.lockup svg { width: 1.05em; height: 1.05em; flex: none; }
+.mk .road { fill: none; stroke: var(--road); stroke-width: 12.5; stroke-linejoin: round; }
+.mk .cl { fill: none; stroke: var(--yellow); stroke-width: 2.2; stroke-dasharray: 4 3.6; stroke-dashoffset: 2; stroke-linejoin: round; }
+.mk .plate { fill: var(--paper); }
+
+/* Big road drawings */
+.bigroad .edge { fill: none; stroke: var(--on-dark); stroke-linejoin: round; opacity: .85; }
+.bigroad .surface { fill: none; stroke: var(--road-dark); stroke-linejoin: round; }
+.bigroad .cl { fill: none; stroke: var(--yellow); stroke-linejoin: round; }
+
+/* ---------- launch 1080x1350 ---------- */
+#launch { width: 1080px; height: 1350px; }
+#launch .art { position: absolute; inset: 0; }
+#launch .text { position: absolute; left: 80px; right: 80px; top: 772px; }
+#launch h1 { font-size: 144px; line-height: .96; font-weight: 720; text-wrap: balance; }
+#launch .sub { margin-top: 36px; font-size: 34px; line-height: 1.38; color: var(--on-dark-2); max-width: 880px; }
+#launch .sub b { color: var(--on-dark); font-weight: 600; }
+#launch .foot { position: absolute; left: 80px; right: 80px; bottom: 70px; display: flex; justify-content: space-between; align-items: center; }
+#launch .foot .lockup { font-size: 44px; }
+#launch .url { font: 600 34px/1 var(--display); font-stretch: 105%; color: var(--yellow); letter-spacing: .01em; }
+
+/* ---------- farewell 1080x1350 ---------- */
+#farewell { width: 1080px; height: 1350px; }
+#farewell .photo { position: absolute; left: 0; top: 0; width: 1080px; height: 790px; background: url(../src/img/patrick.jpg) no-repeat; background-size: 1364px auto; background-position: 0 -232px; border-bottom: 12px solid var(--yellow); }
+#farewell .text { position: absolute; left: 72px; right: 72px; top: 840px; }
+#farewell h1 { font-size: 78px; line-height: 1.04; font-weight: 700; white-space: nowrap; }
+#farewell h1 span { display: block; color: var(--muted); font-weight: 600; }
+#farewell .tl { position: absolute; left: 0; right: 0; top: 1050px; height: 250px; }
+.tl .lbl { position: absolute; font-size: 23px; line-height: 1.2; color: var(--muted); white-space: nowrap; }
+.tl .lbl b { display: block; font: 650 31px/1.1 var(--display); font-stretch: 105%; color: var(--ink); letter-spacing: -0.01em; }
+.tl .lbl.up { bottom: 183px; } .tl .lbl.down { top: 173px; }
+.tl .lbl.now b { color: var(--ink); }
+.tl .lbl.now { color: var(--ink); font-weight: 600; }
+
+/* ---------- offer 1080x1350 ---------- */
+#offer { width: 1080px; height: 1350px; }
+#offer .photo { height: 372px; background: url(../src/img/rundkjoring.jpg) no-repeat; background-size: 1160px auto; background-position: -40px -18px; border-bottom: 12px solid var(--yellow); }
+#offer .body { padding: 56px 72px 0; }
+#offer .eyebrow { display: flex; align-items: center; gap: 18px; font: 600 23px/1.2 var(--display); text-transform: uppercase; letter-spacing: .14em; margin-bottom: 26px; }
+#offer .eyebrow::before { content: ""; width: 44px; height: 6px; background: var(--yellow); flex: none; }
+#offer h1 { font-size: 84px; line-height: 1.02; font-weight: 700; text-wrap: balance; }
+#offer ul { list-style: none; margin-top: 38px; border-top: 2px solid var(--ink); }
+#offer li { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; padding: 21px 0 20px; border-bottom: 1px solid var(--line); }
+#offer li b { font: 620 33px/1.15 var(--display); font-stretch: 104%; letter-spacing: -0.01em; }
+#offer li span { font-size: 24px; color: var(--muted); white-space: nowrap; }
+#offer .foot { position: absolute; left: 72px; right: 72px; bottom: 60px; display: flex; justify-content: space-between; align-items: center; }
+#offer .foot .lockup { font-size: 40px; }
+#offer .foot .where { font-size: 24px; color: var(--ink-2); text-align: right; line-height: 1.35; }
+#offer .foot .where b { display: block; font: 650 30px/1.2 var(--display); color: var(--ink); }
+
+/* ---------- logo 400x400 ---------- */
+#logo { width: 400px; height: 400px; display: none; place-items: center; }
+#logo.on { display: grid; }
+#logo svg { width: 214px; height: 224px; }
+
+/* ---------- company cover 1200x200 (6:1) ---------- */
+#cover { width: 1200px; height: 200px; }
+#cover .text { position: absolute; left: 0; right: 0; top: 34px; text-align: center; }
+#cover h1 { font-size: 40px; line-height: 1.05; font-weight: 680; }
+#cover p { margin-top: 10px; font-size: 19px; color: var(--on-dark-2); letter-spacing: .01em; }
+#cover p b { color: var(--yellow); font-weight: 600; }
+#cover .art { position: absolute; inset: 0; }
+
+/* ---------- personal banner 1584x396 (4:1) ---------- */
+#banner { width: 1584px; height: 396px; }
+#banner .art { position: absolute; inset: 0; }
+#banner .text { position: absolute; right: 84px; top: 62px; width: 900px; }
+#banner .lockup { font-size: 58px; }
+#banner h1 { margin-top: 26px; font-size: 42px; line-height: 1.1; font-weight: 650; }
+#banner p { margin-top: 12px; font-size: 24px; color: var(--on-dark-2); }
+#banner p b { color: var(--yellow); font-weight: 600; }
+
+/* ---------- link preview 1200x630 ---------- */
+#og { width: 1200px; height: 630px; }
+#og .text { position: absolute; left: 64px; top: 58px; width: 690px; bottom: 58px; display: flex; flex-direction: column; }
+#og .lockup { font-size: 40px; }
+#og h1 { margin-top: auto; font-size: 66px; line-height: 1.02; font-weight: 700; text-wrap: balance; }
+#og p { margin-top: 22px; font-size: 25px; line-height: 1.4; color: var(--ink-2); max-width: 600px; }
+#og .photo { position: absolute; right: 0; top: 0; width: 400px; height: 630px; background: url(../src/img/patrick-hero.jpg) no-repeat; background-size: 520px auto; background-position: 50% 0; border-left: 10px solid var(--yellow); }
+</style>
+</head>
+<body>
+
+<!-- ============ launch ============ -->
+<div class="frame dark" id="launch">
+  <svg class="art bigroad" viewBox="0 0 1080 1350" width="1080" height="1350" aria-hidden="true">
+    <defs><path id="lr" d="M -120 640 H 228 A 152 152 0 0 0 380 488 V 146 L 800 596 V -120"/></defs>
+    <use href="#lr" class="edge" stroke-width="152"/>
+    <use href="#lr" class="surface" stroke-width="136"/>
+    <use href="#lr" class="cl" stroke-width="22" stroke-dasharray="52 46" stroke-dashoffset="10"/>
+  </svg>
+  <div class="text">
+    <h1 class="d" data-t="launch.h1"></h1>
+    <p class="sub" data-t="launch.sub"></p>
+  </div>
+  <div class="foot">
+    <span class="lockup"><svg class="mk" viewBox="0 0 64 64"><rect class="plate" width="64" height="64" rx="12"/><path class="road" d="M18 53V17l28 30V11"/><path class="cl" d="M18 53V17l28 30V11"/></svg>NovaCoach</span>
+    <span class="url">novacoach.no</span>
+  </div>
+</div>
+
+<!-- ============ farewell ============ -->
+<div class="frame paper" id="farewell">
+  <div class="photo" role="img" aria-label="Patrick Mc Gloin"></div>
+  <div class="text">
+    <h1 class="d"><span data-t="farewell.h1a" style="display:inline;color:inherit;font-weight:inherit"></span><span data-t="farewell.h1b"></span></h1>
+  </div>
+  <div class="tl" id="tl"></div>
+</div>
+
+<!-- ============ offer ============ -->
+<div class="frame paper" id="offer">
+  <div class="photo" role="img"></div>
+  <div class="body">
+    <p class="eyebrow" data-t="offer.eyebrow"></p>
+    <h1 class="d" data-t="offer.h1"></h1>
+    <ul id="offers"></ul>
+  </div>
+  <div class="foot">
+    <span class="lockup"><svg class="mk" viewBox="10 9 44 46"><path class="road" d="M18 53V17l28 30V11"/><path class="cl" d="M18 53V17l28 30V11"/></svg>NovaCoach</span>
+    <span class="where" data-t="offer.where"></span>
+  </div>
+</div>
+
+<!-- ============ logo ============ -->
+<div class="frame paper" id="logo">
+  <svg class="mk" viewBox="10 9 44 46"><path class="road" d="M18 53V17l28 30V11"/><path class="cl" d="M18 53V17l28 30V11"/></svg>
+</div>
+
+<!-- ============ cover ============ -->
+<div class="frame dark" id="cover">
+  <svg class="art bigroad" viewBox="0 0 1200 200" width="1200" height="200" aria-hidden="true">
+    <defs><path id="cr" d="M -20 168 H 1220"/></defs>
+    <use href="#cr" class="edge" stroke-width="40"/>
+    <use href="#cr" class="surface" stroke-width="34"/>
+    <use href="#cr" class="cl" stroke-width="5" stroke-dasharray="22 18"/>
+  </svg>
+  <div class="text">
+    <h1 class="d" data-t="cover.h1"></h1>
+    <p data-t="cover.sub"></p>
+  </div>
+</div>
+
+<!-- ============ banner ============ -->
+<div class="frame dark" id="banner">
+  <svg class="art bigroad" viewBox="0 0 1584 396" width="1584" height="396" aria-hidden="true">
+    <defs><path id="br" d="M -40 338 H 1624"/></defs>
+    <use href="#br" class="edge" stroke-width="52"/>
+    <use href="#br" class="surface" stroke-width="44"/>
+    <use href="#br" class="cl" stroke-width="7" stroke-dasharray="30 24"/>
+  </svg>
+  <div class="text">
+    <span class="lockup"><svg class="mk" viewBox="0 0 64 64"><rect class="plate" width="64" height="64" rx="12"/><path class="road" d="M18 53V17l28 30V11"/><path class="cl" d="M18 53V17l28 30V11"/></svg>NovaCoach</span>
+    <h1 class="d" data-t="banner.h1"></h1>
+    <p data-t="banner.sub"></p>
+  </div>
+</div>
+
+<!-- ============ og ============ -->
+<div class="frame paper" id="og">
+  <div class="text">
+    <span class="lockup"><svg class="mk" viewBox="10 9 44 46"><path class="road" d="M18 53V17l28 30V11"/><path class="cl" d="M18 53V17l28 30V11"/></svg>NovaCoach</span>
+    <h1 class="d" data-t="og.h1"></h1>
+    <p data-t="og.sub"></p>
+  </div>
+  <div class="photo" role="img" aria-label="Patrick Mc Gloin"></div>
+</div>
+
+<script>
+const T = {
+  no: {
+    launch: { h1: "Ny linje­føring.", sub: "Patrick&nbsp;Mc&nbsp;Gloin starter <b>NovaCoach</b>: kurs og coaching i Novapoint og Quadri, på deres eget prosjekt." },
+    farewell: { h1a: "38 år med Novapoint.", h1b: "Og jeg er ikke ferdig." },
+    tl: [["1988", "Statens vegvesen"], ["1993", "Vianova"], ["2015", "Trimble"], ["2026", "NovaCoach"]],
+    offer: {
+      eyebrow: "Kurs og coaching i Novapoint og Quadri",
+      h1: "Lær Novapoint på deres eget prosjekt.",
+      list: [["Novapoint Veg på eget prosjekt", "2 dager"], ["Novapoint Veg", "2 dager"], ["Quadri for prosjektteam", "1 dag"], ["Team-coaching på eget prosjekt", "Pakke"], ["Novapoint-kurs for studenter", "Per semester"]],
+      where: "Hos dere, i hele Europa<b>novacoach.no</b>",
+    },
+    cover: { h1: "Kurs og coaching i Novapoint og Quadri", sub: "På deres eget prosjekt, med Patrick&nbsp;Mc&nbsp;Gloin · <b>novacoach.no</b>" },
+    banner: { h1: "Kurs og coaching i Novapoint og Quadri", sub: "På deres eget prosjekt. Hos dere, i hele Europa. <b>novacoach.no</b>" },
+    og: { h1: "Lær Novapoint på deres eget prosjekt.", sub: "Kurs og coaching i Novapoint og Quadri med Patrick&nbsp;Mc&nbsp;Gloin." },
+  },
+  en: {
+    launch: { h1: "Changing lanes.", sub: "Patrick&nbsp;Mc&nbsp;Gloin launches <b>NovaCoach</b>: Novapoint and Quadri training and coaching, on your own project." },
+    farewell: { h1a: "38 years of Novapoint.", h1b: "And I'm not done yet." },
+    tl: [["1988", "Statens vegvesen"], ["1993", "Vianova"], ["2015", "Trimble"], ["2026", "NovaCoach"]],
+    offer: {
+      eyebrow: "Novapoint and Quadri training and coaching",
+      h1: "Learn Novapoint on your own project.",
+      list: [["Novapoint Road on your own project", "2 days"], ["Novapoint Road", "2 days"], ["Quadri for project teams", "1 day"], ["Team coaching on your own project", "Package"], ["Novapoint course for students", "Per semester"]],
+      where: "On site, anywhere in Europe<b>novacoach.no</b>",
+    },
+    cover: { h1: "Novapoint and Quadri training and coaching", sub: "On your own project, with Patrick&nbsp;Mc&nbsp;Gloin · <b>novacoach.no</b>" },
+    banner: { h1: "Novapoint and Quadri training and coaching", sub: "On your own project. On site, anywhere in Europe. <b>novacoach.no</b>" },
+    og: { h1: "Learn Novapoint on your own project.", sub: "Novapoint and Quadri training and coaching with Patrick&nbsp;Mc&nbsp;Gloin." },
+  },
+};
+
+const q = new URLSearchParams(location.search);
+const f = q.get("f") || "launch", lang = q.get("lang") || "no", t = T[lang];
+document.getElementById(f).classList.add("on");
+document.documentElement.lang = lang;
+for (const el of document.querySelectorAll("[data-t]")) {
+  const [a, b] = el.dataset.t.split(".");
+  el.innerHTML = t[a][b];
+}
+document.getElementById("offers").innerHTML = t.offer.list.map(([h, s]) => `<li><b>${h}</b><span>${s}</span></li>`).join("");
+
+// Career timeline, drawn to scale like chainage along an alignment: 1988 at x0, 2026 at x1.
+(function timeline() {
+  const W = 1080, x0 = 92, x1 = 880, y = 120, h = 46, yr = v => x0 + (v - 1988) / (2026 - 1988) * (x1 - x0);
+  const svg = `<svg width="${W}" height="250" viewBox="0 0 ${W} 250" style="position:absolute;inset:0">
+    <path d="M ${x0 - 40} ${y} H ${W + 20}" stroke="#d9d4c9" stroke-width="${h + 8}" fill="none" stroke-linecap="round"/>
+    <path d="M ${x0 - 40} ${y} H ${W + 20}" stroke="#1b1f24" stroke-width="${h}" fill="none" stroke-linecap="round"/>
+    <path d="M ${x0 - 22} ${y} H ${W + 20}" stroke="#f0c43c" stroke-width="7" fill="none" stroke-dasharray="20 16"/>
+    ${t.tl.map(([v], i) => {
+      const x = yr(+v), up = i % 2 === 1;
+      return `<path d="M ${x} ${up ? y - h / 2 - 26 : y - h / 2} V ${up ? y + h / 2 : y + h / 2 + 26}" stroke="#16191d" stroke-width="3"/>
+              <circle cx="${x}" cy="${y}" r="9" fill="${i === 3 ? '#f0c43c' : '#f4f1ea'}" stroke="#16191d" stroke-width="3"/>`;
+    }).join("")}
+  </svg>`;
+  const labels = t.tl.map(([v, s], i) => {
+    const up = i % 2 === 1, x = yr(+v);
+    return `<div class="lbl ${up ? "up" : "down"}${i === 3 ? " now" : ""}" style="left:${x - 2}px"><b>${v}</b>${s}</div>`;
+  }).join("");
+  document.getElementById("tl").innerHTML = svg + labels;
+})();
+</script>
+</body>
+</html>
