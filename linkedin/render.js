@@ -1,4 +1,4 @@
-// Renders frames.html to PNGs in out/. Usage: node linkedin/render.js
+// Renders frames.html to PNGs in img/. Usage: node linkedin/render.js
 const { chromium } = require("playwright");
 const path = require("path");
 const fs = require("fs");
@@ -18,7 +18,7 @@ const FRAMES = [
 ];
 
 (async () => {
-  const out = path.join(__dirname, "out");
+  const out = path.join(__dirname, "img");
   fs.mkdirSync(out, { recursive: true });
   const browser = await chromium.launch();
   for (const [f, w, h, scale, langs] of FRAMES) {

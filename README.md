@@ -26,6 +26,7 @@ src/_includes/pages/     one template per page type, shared by both languages
 src/no/, src/en/         thin page stubs: URL, page type, link to the other language
 src/css/style.css        styles (design: dark "Asfalt" concept)
 src/img/                 photos and road-model images
+linkedin/                LinkedIn launch kit: images, post texts, render script (not deployed)
 ```
 
 ## Form
