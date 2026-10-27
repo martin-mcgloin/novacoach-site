@@ -42,7 +42,7 @@ const no = {
   },
   offers: [
     { key: "veg", h: "Novapoint Veg på eget prosjekt", tag: "2 dager · hos dere", p: "Etter to dager kan teamet ta deres egen veg fra linje til levert modell og mengderapport etter R110, uten å måtte spørre noen. Detaljert 3D-kryss, modellbasert arbeidsflyt og de hundrevis av funksjonene dere ikke visste fantes.", href: "/kurs/#veg" },
-    { key: "standard", h: "Novapoint Veg Standard", tag: "2 dager · hos dere", p: "Grunnkurset i Novapoint Veg på standard datasett. To dager som tar teamet gjennom hele arbeidsflyten fra terreng og linje til vegmodell og leveranse.", href: "/kurs/#standard" },
+    { key: "standard", h: "Novapoint Veg", tag: "2 dager · hos dere", p: "Grunnkurset i Novapoint Veg på standard datasett. To dager som tar teamet gjennom hele arbeidsflyten fra terreng og linje til vegmodell og leveranse.", href: "/kurs/#standard" },
     { key: "coaching", h: "Team-coaching på eget prosjekt", tag: "Pakke · digitalt eller hos dere", p: "Tips og triks, datahåndtering, arbeidsflyt og samarbeid i Quadri. For hele teamet, mens prosjektet pågår. Dere deler skjerm og modell, Patrick veileder.", href: "/coaching/" },
     { key: "student", h: "Novapoint-kurs for studenter", tag: "Per semester · på campus", p: "Patrick kjører Novapoint-undervisningen for studentene deres, på skolens lisenser og labber, med oppdaterte øvinger for gjeldende versjon.", href: "/kurs/#student" },
     { key: "quadri", h: "Quadri for prosjektteam", tag: "1 dag · hos dere", p: "Oppsett av modell, oppgaver og roller, presentasjoner, konverteringsregler, mengder i tabellvisning og deling til felt. For BIM-koordinatorer og disiplinledere.", href: "/kurs/#quadri" },
@@ -65,7 +65,7 @@ const no = {
         practical: ["To dager hos dere, 09–16", "Opptil 6 deltakere", "Deltakerne bruker egne maskiner og lisenser", "Digital oppfølging"],
       },
       {
-        id: "standard", h: "Novapoint Veg Standard", tag: "2 dager · hos dere · for et vegteam",
+        id: "standard", h: "Novapoint Veg", tag: "2 dager · hos dere · for et vegteam",
         intro: "Grunnkurset i Novapoint Veg. Patrick tar teamet gjennom hele arbeidsflyten på et standard datasett, slik at alle får samme fundament før dere starter på egne prosjekter.",
         learnTitle: "Dette jobber vi med",
         learn: ["Terrengmodell og grunnlagsdata", "Linjeføring og vertikalgeometri", "Vegmodell: tverrprofil og overbygning", "Kryss og rundkjøring", "Skjæring og fylling, og mengder", "Tegningsproduksjon og leveranse"],
@@ -144,7 +144,7 @@ const no = {
   form: {
     name: "Navn", company: "Firma eller institusjon", email: "E-post", phone: "Telefon (valgfritt)",
     offer: "Hva er dere interessert i?",
-    offers: ["Novapoint Veg på eget prosjekt", "Novapoint Veg Standard", "Team-coaching", "Novapoint-kurs for studenter", "Quadri for prosjektteam", "Noe annet"],
+    offers: ["Novapoint Veg på eget prosjekt", "Novapoint Veg", "Team-coaching", "Novapoint-kurs for studenter", "Quadri for prosjektteam", "Noe annet"],
     location: "Hvor holder dere til? (by, land)",
     timing: "Når passer det?", timings: ["Neste måned", "Dette kvartalet", "Vi undersøker bare"],
     team: "Hvor mange i teamet?",
@@ -215,7 +215,7 @@ const en = {
   },
   offers: [
     { key: "veg", h: "Novapoint Road on your own project", tag: "2 days · on site", p: "After two days your team can take your own road from alignment to a delivered model and quantity report, on your own. Detailed 3D intersections, model-based workflow, and the hundreds of functions you did not know were there.", href: "/en/courses/#veg" },
-    { key: "standard", h: "Novapoint Road Standard", tag: "2 days · on site", p: "The standard introduction to Novapoint Road, run on a standard dataset. Two days that take the team through the whole workflow from terrain and alignment to road model and delivery.", href: "/en/courses/#standard" },
+    { key: "standard", h: "Novapoint Road", tag: "2 days · on site", p: "The standard introduction to Novapoint Road, run on a standard dataset. Two days that take the team through the whole workflow from terrain and alignment to road model and delivery.", href: "/en/courses/#standard" },
     { key: "coaching", h: "Team coaching on your own project", tag: "Package · online or on site", p: "Tips and tricks, data management, workflow and collaboration in Quadri. For the whole team, while the project is running. You share your screen and model, Patrick guides.", href: "/en/coaching/" },
     { key: "student", h: "Novapoint course for students", tag: "Per semester · on campus", p: "Patrick runs the Novapoint teaching for your students, on the institution's licences and labs, with exercises updated for the current version.", href: "/en/courses/#student" },
     { key: "quadri", h: "Quadri for project teams", tag: "1 day · on site", p: "Model setup, tasks and roles, presentations, conversion rules, quantities in table view and sharing to the field. For BIM coordinators and discipline leads.", href: "/en/courses/#quadri" },
@@ -238,7 +238,7 @@ const en = {
         practical: ["Two days at your office, 09–16", "Up to 6 participants", "Participants use their own machines and licences", "Online follow-up"],
       },
       {
-        id: "standard", h: "Novapoint Road Standard", tag: "2 days · on site · for a road design team",
+        id: "standard", h: "Novapoint Road", tag: "2 days · on site · for a road design team",
         intro: "The introductory course in Novapoint Road. Patrick takes the team through the whole workflow on a standard dataset, so everyone has the same foundation before starting on their own projects.",
         learnTitle: "What we work on",
         learn: ["Terrain model and base data", "Horizontal and vertical alignment", "Road model: cross section and pavement design", "Intersections and roundabouts", "Cut and fill, and quantities", "Drawing production and delivery"],
@@ -317,7 +317,7 @@ const en = {
   form: {
     name: "Name", company: "Company or institution", email: "Email", phone: "Phone (optional)",
     offer: "What are you interested in?",
-    offers: ["Novapoint Road on your own project", "Novapoint Road Standard", "Team coaching", "Novapoint course for students", "Quadri for project teams", "Something else"],
+    offers: ["Novapoint Road on your own project", "Novapoint Road", "Team coaching", "Novapoint course for students", "Quadri for project teams", "Something else"],
     location: "Where are you based? (city, country)",
     timing: "When?", timings: ["Next month", "This quarter", "Just exploring"],
     team: "How many in the team?",
