@@ -28,7 +28,7 @@ const no = {
     modelsLead: "Kursene handler om det som faktisk skal bygges: linjeføring, normalprofil, kryss og mengder. To utsnitt fra en vegmodell laget i Novapoint.",
     models: {
       roundabout: { alt: "3D-visning av en rundkjøring med fire armer og en trerekke langs vegen.", caption: "Rundkjøring med tilfarter, i 3D." },
-      section: { alt: "Tverrprofil av en tofelts veg med kjørefeltbredder, skuldre, tverrfall og lag i overbygningen.", caption: "Normalprofil med kjørefelt, skuldre, tverrfall og overbygning." },
+      section: { alt: "Tverrprofil av en veg med tverrfall, lag i overbygningen og skråninger på begge sider.", caption: "Normalprofil med tverrfall, overbygning og skråninger." },
     },
     offersTitle: "Kurs og pakker",
     whyTitle: "Hvorfor Patrick?",
@@ -201,7 +201,7 @@ const en = {
     modelsLead: "The courses are about what actually gets built: alignment, cross section, junctions and quantities. Two views from a road model made in Novapoint.",
     models: {
       roundabout: { alt: "3D view of a roundabout with four arms and a row of trees along the road.", caption: "Roundabout with its approach roads, in 3D." },
-      section: { alt: "Cross section of a two-lane road showing lane widths, shoulders, crossfall and pavement layers.", caption: "Typical cross section with lanes, shoulders, crossfall and pavement layers." },
+      section: { alt: "Cross section of a road showing crossfall, pavement layers and side slopes on both sides.", caption: "Typical cross section with crossfall, pavement layers and side slopes." },
     },
     offersTitle: "Courses and packages",
     whyTitle: "Why Patrick?",
