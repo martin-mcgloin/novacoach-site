@@ -111,6 +111,8 @@ header { padding-block: 2rem 3rem; }
 .idea p { color: var(--ink-2); }
 .idea .eg { font-size: .93rem; color: var(--muted); font-style: italic; }
 
+.changes { margin: 0; padding: .7rem 1.2rem 1.1rem 2.3rem; display: grid; gap: .35rem; color: var(--ink-2); max-width: 44em; }
+
 footer { padding-block: 2.4rem 3rem; border-top: 1px solid var(--line); font-size: .9rem; color: var(--muted); display: grid; gap: .6rem; }
 footer ul { margin: 0; padding-left: 1.1em; }
 [hidden] { display: none !important; }
@@ -123,8 +125,8 @@ footer ul { margin: 0; padding-left: 1.1em; }
   <div class="hero">
     <p class="eyebrow">LinkedIn launch kit</p>
     <h1>Goodbye Trimble, hello NovaCoach.</h1>
-    <p class="lead">A plan for Patrick's last week at Trimble and his first week as NovaCoach: thirteen images in the site's own look, post drafts in Norwegian and English, and the setup for a NovaCoach company page people can follow.</p>
-    <p class="muted">The drafts are starting points built only from facts on novacoach.no. Patrick's own words and memories will beat them, so edit freely. Text in <span style="background:color-mix(in srgb, var(--yellow) 35%, transparent);padding:0 .15em;border-radius:2px">yellow</span> is a placeholder.</p>
+    <p class="lead">A plan for Patrick's last week at Trimble and his first week as NovaCoach, built around his own announcement post: images in the site's own look, his post with light edits, and the setup for a NovaCoach company page people can follow.</p>
+    <p class="muted">Everything apart from Patrick's post is a starting point built only from facts on novacoach.no, so edit freely. Text in <span style="background:color-mix(in srgb, var(--yellow) 35%, transparent);padding:0 .15em;border-radius:2px">yellow</span> is a placeholder.</p>
     <div class="toolbar">
       <span class="muted" id="lang-label">Language for images and drafts</span>
       <div class="seg" role="group" aria-labelledby="lang-label">
@@ -138,24 +140,28 @@ footer ul { margin: 0; padding-left: 1.1em; }
 <section id="decisions">
   <div class="sec-head">
     <p class="eyebrow">Settle these first</p>
-    <h2>Five decisions</h2>
+    <h2>Six decisions</h2>
   </div>
   <div class="decisions">
     <div class="decision">
       <h3>Which day is the last day?</h3>
-      <p>The plan assumes Friday 30 October. If it's Thursday, move the farewell post with it; everything after stays relative to that day.</p>
+      <p>The plan assumes Friday 30 October. If it's Thursday, move Patrick's post with it; everything after stays relative to that day.</p>
     </div>
     <div class="decision">
-      <h3>Two posts or one</h3>
-      <p><span class="rec">Suggested</span>Two: a thank-you on the last day, then the NovaCoach launch the following Tuesday. Retirement posts draw a lot of attention, so this gives two big moments, and the goodbye doesn't read as a sales pitch. One combined post is simpler and puts NovaCoach in front of the biggest audience straight away. The farewell draft has a one-post ending for that case.</p>
+      <h3>When Patrick's post goes out</h3>
+      <p><span class="rec">Suggested</span>On the last day. His draft covers both the goodbye and the news, so one post is enough. The profile update on Monday then triggers LinkedIn's "congratulate Patrick" prompt, a second wave without a second post. Keep it bilingual with English first, as he wrote it.</p>
     </div>
     <div class="decision">
-      <h3>Which language</h3>
-      <p><span class="rec">Suggested</span>Farewell in English, because the Trimble network is international. Launch in Norwegian, because the buyers are Norwegian road owners, consultants and universities. Every draft and image exists in both.</p>
+      <h3>The years in the post</h3>
+      <p>His draft says 5 + 20 + 10 years, which adds up to 35, while the images say 38 (1988–2026). Vianova was 1993–2015 (22 years) and Trimble 2015–2026 (11), so the edited version uses 22 and 11 and the numbers agree. His call.</p>
+    </div>
+    <div class="decision">
+      <h3>Platanus AS in the post</h3>
+      <p><span class="rec">Suggested</span>Leave it out of the post. Two names in one post makes readers wonder which one to follow. The company name is already on the site and in the page's About text, where buyers look for it.</p>
     </div>
     <div class="decision">
       <h3>Tell Trimble first</h3>
-      <p>A short heads-up to his manager before the launch post. NovaCoach teaches Trimble's products, so goodwill and referrals from Trimble are worth a lot. Worth a quick look at the employment agreement for anything on activities after leaving before anything goes public.</p>
+      <p>His draft already positions NovaCoach as a complement to Trimble's own offerings, which is exactly right. A heads-up to his manager before the post, and a look at the employment agreement for anything on activities after leaving, keeps it that way.</p>
     </div>
     <div class="decision">
       <h3>Link preview for novacoach.no</h3>
@@ -177,16 +183,16 @@ footer ul { margin: 0; padding-left: 1.1em; }
       <ul>
         <li>Finish the site's launch checklist: novacoach.no pointing at Netlify, the patrick@novacoach.no mailbox in the site footer, and form notifications to Patrick's email.</li>
         <li>Create the NovaCoach company page with the logo, cover, tagline and About text from this kit. Add Martin as a second admin.</li>
-        <li>Publish the offer card as the page's first post, so it isn't empty when people arrive.</li>
-        <li>Don't announce the page yet, and leave the profile alone while still at Trimble.</li>
+        <li>Publish the offer card as the page's first post, so it isn't empty when people arrive. The page has to exist before Patrick's post, so that "@NovaCoach" in the post links to it.</li>
+        <li>Leave his profile alone while he is still at Trimble.</li>
       </ul>
     </div>
     <div class="stop key">
       <p class="when">Fri 30 Oct · last day at Trimble</p>
-      <h3>The thank-you post</h3>
+      <h3>Patrick's post</h3>
       <ul>
-        <li>Farewell post from Patrick's own profile with the farewell image. No link and no pitch.</li>
-        <li>Tag up to five people by name. More starts to feel like a mailing list.</li>
+        <li>His announcement from his own profile, English then Norwegian, with two images: the timeline (English version, since the post starts in English) and the services card.</li>
+        <li>Type @NovaCoach in the post and pick the page, so readers can follow it in one click. Tag up to five people by name.</li>
         <li>Family and close colleagues: react early and comment with a real memory rather than "congrats". Patrick replies to every comment that day.</li>
       </ul>
     </div>
@@ -201,19 +207,18 @@ footer ul { margin: 0; padding-left: 1.1em; }
     </div>
     <div class="stop key">
       <p class="when">Tue 3 Nov</p>
-      <h3>Launch NovaCoach</h3>
+      <h3>The NovaCoach page goes live</h3>
       <ul>
-        <li>Launch post from Patrick's profile with the launch image. Put novacoach.no in the first comment.</li>
-        <li>Reshare it from the NovaCoach page.</li>
+        <li>The page posts the launch image ("Ny linjeføring") with the short page text. Patrick reshares it with a line of his own.</li>
         <li>Invite connections to follow the page. LinkedIn gives each page a monthly batch of invite credits, and a credit comes back when someone accepts, so start with the people most likely to accept.</li>
       </ul>
     </div>
     <div class="stop">
       <p class="when">Wed 4 – Fri 6 Nov</p>
-      <h3>Talk to people directly</h3>
+      <h3>Talk to people, and keep the promise</h3>
       <ul>
         <li>Send 20–30 personal messages: former customers, regulars from the user conferences, and lecturers who teach Novapoint. A personal message gets more replies than any post.</li>
-        <li>Use the message draft below as a base and make each one personal.</li>
+        <li>His post promises practical tips, so post the first one this week, with the "Tips fremover" sign as the page's cover for the series.</li>
       </ul>
     </div>
     <div class="stop">
@@ -230,17 +235,29 @@ footer ul { margin: 0; padding-left: 1.1em; }
 <section id="images">
   <div class="sec-head">
     <p class="eyebrow">Images</p>
-    <h2>Thirteen images, ready to upload</h2>
+    <h2>Nineteen images, ready to upload</h2>
     <p class="muted">Feed posts are 4:5 portrait, which takes the most space in the LinkedIn feed. Every image uses the logo, colours and fonts from novacoach.no.</p>
   </div>
   <div class="gallery">
     <figure class="shot">
       <div class="frame"><img data-src="img/novacoach-farewell-{lang}.png" alt="Patrick laughing, with the headline 38 years of Novapoint and a road timeline from 1988 to 2026" width="1080" height="1350"></div>
-      <figcaption><span class="name"><b>Farewell post</b><span class="px">1080 × 1350</span></span><span class="use">Last day at Trimble. His career drawn as a road, with the years placed to scale like stations along an alignment.</span></figcaption>
+      <figcaption><span class="name"><b>Timeline</b><span class="px">1080 × 1350</span></span><span class="use">First image in Patrick's post. It draws his opening line as a road, with the years placed to scale like stations along an alignment.</span></figcaption>
     </figure>
     <figure class="shot">
       <div class="frame"><img data-src="img/novacoach-launch-{lang}.png" alt="The NovaCoach N drawn as a road on asphalt, with the headline New alignment" width="1080" height="1350"></div>
-      <figcaption><span class="name"><b>Launch post</b><span class="px">1080 × 1350</span></span><span class="use">Launch day. The logo's N becomes a road. "Ny linjeføring" is a pun every road designer gets; the English version says "Changing lanes".</span></figcaption>
+      <figcaption><span class="name"><b>Page launch</b><span class="px">1080 × 1350</span></span><span class="use">The NovaCoach page's own launch post on Tuesday. The logo's N becomes a road. "Ny linjeføring" is a pun every road designer gets; the English version says "Changing lanes".</span></figcaption>
+    </figure>
+    <figure class="shot">
+      <div class="frame"><img data-src="img/novacoach-services-{lang}.png" alt="Hire 38 years of Novapoint: road design courses, Quadri workflows and data flow to construction as stations along a road" width="1080" height="1350"></div>
+      <figcaption><span class="name"><b>Services card</b><span class="px">1080 × 1350</span></span><span class="use">Second image in Patrick's post. The three things his draft says he can be hired for, as stations along a road.</span></figcaption>
+    </figure>
+    <figure class="shot">
+      <div class="frame"><img data-src="img/novacoach-tips-{lang}.png" alt="A yellow warning sign with the NovaCoach road N and the headline Tips ahead" width="1080" height="1350"></div>
+      <figcaption><span class="name"><b>Tips sign</b><span class="px">1080 × 1350</span></span><span class="use">Kicks off the tips his post promises. A warning sign whose road is the NovaCoach N.</span></figcaption>
+    </figure>
+    <figure class="shot">
+      <div class="frame"><img data-src="img/novacoach-quote-{lang}.png" alt="Quote from Patrick about retirement and teaching Novapoint, with his portrait" width="1080" height="1350"></div>
+      <figcaption><span class="name"><b>Quote card</b><span class="px">1080 × 1350</span></span><span class="use">Patrick's own words from the site. For the page in week 2, or alongside the personal story.</span></figcaption>
     </figure>
     <figure class="shot">
       <div class="frame"><img data-src="img/novacoach-offer-{lang}.png" alt="Roundabout from a Novapoint model above a list of the five NovaCoach courses" width="1080" height="1350"></div>
@@ -263,7 +280,7 @@ footer ul { margin: 0; padding-left: 1.1em; }
       <figcaption><span class="name"><b>Website link preview</b><span class="px">1200 × 630</span></span><span class="use">For the site, not for posting. Shown whenever someone shares a novacoach.no link. Needs the small site change mentioned above.</span></figcaption>
     </figure>
   </div>
-  <p class="save-note">To save an image at full size, right-click it (or long-press on a phone) and choose Save image. Martin also has all thirteen in a zip.</p>
+  <p class="save-note">To save an image at full size, right-click it (or long-press on a phone) and choose Save image. Martin also has all nineteen in a zip.</p>
 </section>
 
 <section id="drafts">
@@ -272,94 +289,87 @@ footer ul { margin: 0; padding-left: 1.1em; }
     <h2>Post drafts and page text</h2>
   </div>
   <div class="tabs" role="tablist" aria-label="Drafts">
-    <button type="button" role="tab" id="t-farewell" aria-controls="p-farewell" aria-selected="true">Farewell post</button>
-    <button type="button" role="tab" id="t-launch" aria-controls="p-launch" aria-selected="false">Launch post</button>
+    <button type="button" role="tab" id="t-patrick" aria-controls="p-patrick" aria-selected="true">Patrick's post</button>
+    <button type="button" role="tab" id="t-pagepost" aria-controls="p-pagepost" aria-selected="false">Page launch post</button>
     <button type="button" role="tab" id="t-page" aria-controls="p-page" aria-selected="false">Company page</button>
     <button type="button" role="tab" id="t-profile" aria-controls="p-profile" aria-selected="false">Profile</button>
     <button type="button" role="tab" id="t-dm" aria-controls="p-dm" aria-selected="false">Personal message</button>
+    <button type="button" role="tab" id="t-story" aria-controls="p-story" aria-selected="false">Personal story (optional)</button>
   </div>
 
-  <!-- Farewell -->
-  <div class="draft" role="tabpanel" id="p-farewell" aria-labelledby="t-farewell">
-    <div class="draft-head"><p>Last day at Trimble, with the farewell image. No link.</p></div>
+  <!-- Patrick's post -->
+  <div class="draft" role="tabpanel" id="p-patrick" aria-labelledby="t-patrick">
+    <div class="draft-head"><p>Patrick's own draft with light edits. One post, English then Norwegian, on the last day, with the timeline and services images.</p></div>
     <div class="block">
-      <div class="block-label">Post<button type="button" class="copy">Copy</button></div>
-<div class="text" data-l="en">Today is my last day at Trimble.
+      <div class="block-label">Edited version<button type="button" class="copy">Copy</button></div>
+<div class="text">After 5 years at the Norwegian Public Roads Administration, 22 years at Vianova and 11 years at Trimble, an exciting new chapter begins.
 
-In 1988 I was a young road designer at Statens vegvesen in Drammen, drawing the E18 through Kobbervikdalen by hand. The office had just started using something called NovaCAD, and I threw myself at it.
+Thank you to all the colleagues, customers and Novapoint users I have had the pleasure of working with along the way.
 
-In 1993 Vianova called. That was the start of more than 30 years building Novapoint: as CEO, as domain lead for Novapoint Road, as chairman when Trimble bought Vianova in 2015, and in recent years as product director for Novapoint, Quadri, Quantm and Geosuite.
+I look forward to sharing the knowledge and hands-on experience I've built over the years. Through NovaCoach (novacoach.no), I provide training and project support focused on Novapoint Road and Quadri—now part of the Trimble Infrastructure Design Suite.
 
-What I'm proudest of isn't a feature. It's the user conferences, and the community of road designers who shared best practice, ideas and enthusiasm for the craft there, year after year.
+I am available to run road design courses, optimize workflows in Quadri, or streamline data flow from detailed design to construction—serving as a complement to Trimble's own offerings.
 
-Thank you to my colleagues at Vianova and Trimble, and to the customers who taught me as much as I taught them. <span class="ph">[Tag 3–5 people you want to thank]</span>
+I will also be sharing practical tips here on LinkedIn, keeping the spotlight on Novapoint Road and Quadri. Follow <span class="ph">@NovaCoach</span> so you don't miss them.
 
-People keep wishing me a happy retirement. I'll take it. But for me, retirement is about doing what you love, and teaching Novapoint has always been my passion. So I'm not going far. More on that next week.</div>
-<div class="text" data-l="no">I dag er min siste dag i Trimble.
+———
 
-I 1988 var jeg ung vegplanlegger hos Statens vegvesen i Drammen og tegnet E18 gjennom Kobbervikdalen for hånd. Kontoret hadde nettopp tatt i bruk noe som het NovaCAD, og jeg kastet meg over det.
+Etter 5 år i Statens vegvesen, 22 år i Vianova og 11 år i Trimble starter nå et spennende nytt kapittel.
 
-I 1993 ringte Vianova. Det ble starten på over 30 år med å bygge Novapoint: som daglig leder, som fagansvarlig for Novapoint Veg, som styreleder da Trimble kjøpte Vianova i 2015, og de siste årene som produktdirektør for Novapoint, Quadri, Quantm og Geosuite.
+Takk til alle kolleger, kunder og Novapoint-brukere jeg har hatt gleden av å jobbe med underveis.
 
-Det jeg er stoltest av, er ikke en funksjon. Det er brukermøtene, og fellesskapet av vegplanleggere som delte beste praksis, ideer og entusiasme for faget, år etter år.
+Jeg ser frem til å dele den kunnskapen og praktiske erfaringen jeg har bygget opp gjennom årene. Gjennom NovaCoach (novacoach.no) tilbyr jeg opplæring og prosjektstøtte med fokus på Novapoint Veg og Quadri – nå en del av Trimble Infrastructure Design Suite.
 
-Takk til alle kolleger i Vianova og Trimble, og til kundene som har lært meg minst like mye som jeg har lært dem. <span class="ph">[Tagg 3–5 personer du vil takke]</span>
+Jeg kan leies inn til å holde vegkurs, optimalisere arbeidsflyten i Quadri eller effektivisere dataflyten fra detaljprosjektering til anlegg – som et supplement til Trimbles egne tilbud.
 
-Mange ønsker meg en god pensjonisttilværelse. Den skal jeg ha. Men for meg handler pensjon om å gjøre det man liker, og å lære bort Novapoint har alltid vært en lidenskap. Så jeg går ikke langt. Mer om det neste uke.</div>
+Jeg vil også dele praktiske tips her på LinkedIn fremover, med hovedfokus på Novapoint Veg og Quadri. Følg <span class="ph">@NovaCoach</span>, så går du ikke glipp av dem.</div>
     </div>
     <div class="block">
-      <div class="block-label">One-post version: swap the last paragraph for this<button type="button" class="copy">Copy</button></div>
-<div class="text" data-l="en">People keep wishing me a happy retirement. I'll take it. But for me, retirement is about doing what you love, and teaching Novapoint has always been my passion. So from Monday that is all I'll do, as NovaCoach: Novapoint and Quadri training and coaching, on your own project. Link in the first comment.</div>
-<div class="text" data-l="no">Mange ønsker meg en god pensjonisttilværelse. Den skal jeg ha. Men for meg handler pensjon om å gjøre det man liker, og å lære bort Novapoint har alltid vært en lidenskap. Så fra mandag er det bare det jeg gjør, som NovaCoach: kurs og coaching i Novapoint og Quadri, på deres eget prosjekt. Lenke i første kommentar.</div>
+      <div class="block-label">What changed</div>
+      <ul class="changes">
+        <li>Vianova 20 → 22 years and Trimble 10 → 11, so the post and the images both add up to 38.</li>
+        <li>"Novacoach.no" → "NovaCoach (novacoach.no)", the name people will see on the page.</li>
+        <li>The Platanus AS sentence now runs through NovaCoach, so there is one name to remember.</li>
+        <li>One new line of thanks. Optional, but it gives people something to answer.</li>
+        <li>The tips line ends with "Follow @NovaCoach". Type the @ in LinkedIn and pick the page so it becomes a link.</li>
+        <li>A line between the languages. Everything else is Patrick's wording, dashes included.</li>
+      </ul>
+    </div>
+    <div class="block">
+      <div class="block-label">Patrick's original<button type="button" class="copy">Copy</button></div>
+<div class="text">After 5 years at the Norwegian Public Roads Administration, 20 years at Vianova, and 10 years at Trimble, an exciting new chapter begins.
+
+I look forward to sharing the knowledge and hands-on experience I've built over the years. Through Novacoach.no, I provide training and project support focused on Novapoint Road and Quadri—now part of the Trimble Infrastructure Design Suite.
+
+Through Platanus AS, I am available for hire to conduct road design courses, optimize workflows in Quadri, or streamline data flow from detailed design to construction—serving as a complement to Trimble's own offerings.
+
+I will also be sharing practical tips here on LinkedIn, keeping the spotlight on Novapoint Road and Quadri.
+
+Etter 5 år i Statens vegvesen, 20 år i Vianova og 10 år i Trimble starter nå et spennende nytt kapittel.
+
+Jeg ser frem til å dele den kunnskapen og praktiske erfaringen jeg har bygget opp gjennom årene. Gjennom Novacoach.no tilbyr jeg opplæring og prosjektstøtte med fokus på Novapoint Veg og Quadri – nå en del av Trimble Infrastructure Design Suite.
+
+Gjennom Platanus AS kan jeg leies inn til å holde vegkurs, optimalisere arbeidsflyten i Quadri eller effektivisere dataflyten fra detaljprosjektering til anlegg – som et supplement til Trimbles egne tilbud.
+
+Jeg vil også dele praktiske tips her på LinkedIn fremover, med hovedfokus på Novapoint Veg og Quadri.</div>
     </div>
   </div>
 
-  <!-- Launch -->
-  <div class="draft" role="tabpanel" id="p-launch" aria-labelledby="t-launch" hidden>
-    <div class="draft-head"><p>Tuesday after the last day, with the launch image. Link goes in the first comment.</p></div>
+  <!-- Page launch post -->
+  <div class="draft" role="tabpanel" id="p-pagepost" aria-labelledby="t-pagepost" hidden>
+    <div class="draft-head"><p>From the NovaCoach page on Tuesday 3 November, with the page launch image. Patrick reshares it.</p></div>
     <div class="block">
       <div class="block-label">Post<button type="button" class="copy">Copy</button></div>
 <div class="text" data-l="no">Ny linjeføring.
 
-I dag starter jeg NovaCoach: kurs og coaching i Novapoint og Quadri, helst på deres eget prosjekt.
+NovaCoach er i gang: opplæring, coaching og prosjektstøtte i Novapoint Veg og Quadri med Patrick Mc Gloin, gjerne på deres eget prosjekt.
 
-Et vanlig grunnkurs bruker et standard datasett. Hovedkurset mitt bruker deres. Dere sender grunnlaget på forhånd, jeg bygger øvingene på det, og etter to dager har teamet en modell av sitt eget prosjekt.
-
-Dette tilbyr jeg:
-→ Novapoint Veg på eget prosjekt (2 dager)
-→ Novapoint Veg, grunnkurs (2 dager)
-→ Quadri for prosjektteam (1 dag)
-→ Team-coaching mens prosjektet pågår
-→ Novapoint-undervisning for universiteter og høgskoler
-
-Jeg kommer til dere, i hele Europa.
-
-Novapoint har hundrevis av funksjoner. Jeg var med da de ble bygget. Nå kan jeg bruke all tiden på å hjelpe folk å ta dem i bruk.
-
-Kjenner du et vegteam eller et studieprogram som burde høre om dette? Del gjerne. Lenke i første kommentar, og følg gjerne NovaCoach her på LinkedIn.</div>
+Følg siden for praktiske tips om Novapoint Veg og Quadri. Les mer og meld interesse på novacoach.no.</div>
 <div class="text" data-l="en">Changing lanes.
 
-Today I'm launching NovaCoach: Novapoint and Quadri training and coaching, ideally on your own project.
+NovaCoach is up and running: Novapoint Road and Quadri training, coaching and project support with Patrick Mc Gloin, ideally on your own project.
 
-A typical beginner's course uses a demo dataset. My main course uses yours. You send the base data in advance, I build the exercises on it, and after two days the team has a model of its own project.
-
-What I offer:
-→ Novapoint Road on your own project (2 days)
-→ Novapoint Road, standard course (2 days)
-→ Quadri for project teams (1 day)
-→ Team coaching while the project is running
-→ Novapoint teaching for universities and colleges
-
-I come to you, anywhere in Europe.
-
-Novapoint has hundreds of functions. I was there when they were built. Now I get to spend all my time helping people put them to work.
-
-Know a road design team or a study programme that should hear about this? Please share. Link in the first comment, and do follow NovaCoach here on LinkedIn.</div>
-    </div>
-    <div class="block">
-      <div class="block-label">First comment<button type="button" class="copy">Copy</button></div>
-<div class="text" data-l="no">Les mer og meld interesse på novacoach.no. Jeg svarer innen to virkedager.</div>
-<div class="text" data-l="en">More, and a short interest form, at novacoach.no/en/. I reply within two working days.</div>
+Follow the page for practical tips on Novapoint Road and Quadri. More, and a short interest form, at novacoach.no/en/.</div>
     </div>
   </div>
 
@@ -381,12 +391,12 @@ Know a road design team or a study programme that should hear about this? Please
     </div>
     <div class="block">
       <div class="block-label">Tagline<button type="button" class="copy">Copy</button></div>
-<div class="text" data-l="no">Kurs og coaching i Novapoint og Quadri, på deres eget prosjekt.</div>
-<div class="text" data-l="en">Novapoint and Quadri training and coaching, on your own project.</div>
+<div class="text" data-l="no">Opplæring og prosjektstøtte i Novapoint Veg og Quadri, på deres eget prosjekt.</div>
+<div class="text" data-l="en">Novapoint Road and Quadri training and project support, on your own project.</div>
     </div>
     <div class="block">
       <div class="block-label">About<button type="button" class="copy">Copy</button></div>
-<div class="text" data-l="no">NovaCoach holder kurs og coaching i Novapoint og Quadri, gjerne på deres eget prosjekt.
+<div class="text" data-l="no">NovaCoach tilbyr opplæring og prosjektstøtte i Novapoint Veg og Quadri, gjerne på deres eget prosjekt, som et supplement til Trimbles egne tilbud.
 
 Kursene holdes av Patrick Mc Gloin, som har jobbet med Novapoint siden den het NovaCAD. Han var med på å bygge verktøyene gjennom mer enn 30 år i Vianova og Trimble, som daglig leder, fagansvarlig for Novapoint Veg og produktdirektør.
 
@@ -400,7 +410,7 @@ Kurs og pakker:
 For byggherrer og vegeiere, rådgivere og utdanningsinstitusjoner. Vi kommer til dere, i hele Europa.
 
 NovaCoach er en tjeneste levert av PLATANUS AS, org.nr 925 510 483. Novapoint, Quadri og Trimble er varemerker som tilhører Trimble Inc. NovaCoach er uavhengig og ikke tilknyttet Trimble.</div>
-<div class="text" data-l="en">NovaCoach offers Novapoint and Quadri training and coaching, ideally on your own project.
+<div class="text" data-l="en">NovaCoach offers Novapoint Road and Quadri training and project support, ideally on your own project, as a complement to Trimble's own offerings.
 
 Courses are run by Patrick Mc Gloin, who has worked with Novapoint since it was called NovaCAD. He helped build the tools over more than 30 years at Vianova and Trimble, as CEO, domain lead for Novapoint Road and product director.
 
@@ -422,8 +432,8 @@ NovaCoach is a service delivered by PLATANUS AS, org. no. 925 510 483. Novapoint
     <div class="draft-head"><p>For Monday 2 November, after the last day. Use the language his profile is already in.</p></div>
     <div class="block">
       <div class="block-label">Headline<button type="button" class="copy">Copy</button></div>
-<div class="text" data-l="no">Kurs og coaching i Novapoint og Quadri · NovaCoach · Med Novapoint siden 1988</div>
-<div class="text" data-l="en">Novapoint and Quadri training and coaching · NovaCoach · With Novapoint since 1988</div>
+<div class="text" data-l="no">Opplæring og prosjektstøtte i Novapoint Veg og Quadri · NovaCoach · Med Novapoint siden 1988</div>
+<div class="text" data-l="en">Novapoint Road and Quadri training and project support · NovaCoach · With Novapoint since 1988</div>
     </div>
     <div class="block">
       <div class="block-label">New role</div>
@@ -453,6 +463,27 @@ NovaCoach is a service delivered by PLATANUS AS, org. no. 925 510 483. Novapoint
       <div class="block-label">For lecturers<button type="button" class="copy">Copy</button></div>
 <div class="text" data-l="no">Hei <span class="ph">[navn]</span>! Jeg har startet NovaCoach, og ett av tilbudene er å kjøre Novapoint-undervisningen for studentene deres, på skolens lisenser og labber, med øvinger som er oppdatert for gjeldende versjon. Da kan du bruke tiden på faget. Passer det å ta en prat før neste semester planlegges? novacoach.no/kurs/</div>
 <div class="text" data-l="en">Hi <span class="ph">[name]</span>! I've started NovaCoach, and one of the things I offer is running the Novapoint teaching for your students, on the institution's licences and labs, with exercises updated for the current version. That leaves you the time for the subject itself. Could we talk before next semester is planned? novacoach.no/en/courses/</div>
+    </div>
+  </div>
+  <!-- Personal story -->
+  <div class="draft" role="tabpanel" id="p-story" aria-labelledby="t-story" hidden>
+    <div class="draft-head"><p>If Patrick wants a more personal post a week or two later. It also works as the first "From the archive" post, with the quote card.</p></div>
+    <div class="block">
+      <div class="block-label">Post<button type="button" class="copy">Copy</button></div>
+<div class="text" data-l="en">In 1988 I was a young road designer at Statens vegvesen in Drammen, drawing the E18 through Kobbervikdalen by hand. The office had just started using something called NovaCAD, and I threw myself at it.
+
+In 1993 Vianova called. That was the start of more than 30 years building Novapoint: as CEO, as domain lead for Novapoint Road, as chairman when Trimble bought Vianova in 2015, and in recent years as product director for Novapoint, Quadri, Quantm and Geosuite.
+
+What I'm proudest of isn't a feature. It's the user conferences, and the community of road designers who shared best practice, ideas and enthusiasm for the craft there, year after year.
+
+People keep wishing me a happy retirement. I'll take it. But for me, retirement is about doing what you love, and teaching Novapoint has always been my passion. That's what I do now, as NovaCoach.</div>
+<div class="text" data-l="no">I 1988 var jeg ung vegplanlegger hos Statens vegvesen i Drammen og tegnet E18 gjennom Kobbervikdalen for hånd. Kontoret hadde nettopp tatt i bruk noe som het NovaCAD, og jeg kastet meg over det.
+
+I 1993 ringte Vianova. Det ble starten på over 30 år med å bygge Novapoint: som daglig leder, som fagansvarlig for Novapoint Veg, som styreleder da Trimble kjøpte Vianova i 2015, og de siste årene som produktdirektør for Novapoint, Quadri, Quantm og Geosuite.
+
+Det jeg er stoltest av, er ikke en funksjon. Det er brukermøtene, og fellesskapet av vegplanleggere som delte beste praksis, ideer og entusiasme for faget, år etter år.
+
+Mange ønsker meg en god pensjonisttilværelse. Den skal jeg ha. Men for meg handler pensjon om å gjøre det man liker, og å lære bort Novapoint har alltid vært en lidenskap. Det er det jeg gjør nå, som NovaCoach.</div>
     </div>
   </div>
 </section>

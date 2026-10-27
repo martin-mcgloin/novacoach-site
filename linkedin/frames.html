@@ -103,6 +103,41 @@ svg { display: block; }
 #og h1 { margin-top: auto; font-size: 66px; line-height: 1.02; font-weight: 700; text-wrap: balance; }
 #og p { margin-top: 22px; font-size: 25px; line-height: 1.4; color: var(--ink-2); max-width: 600px; }
 #og .photo { position: absolute; right: 0; top: 0; width: 400px; height: 630px; background: url(../src/img/patrick-hero.jpg) no-repeat; background-size: 520px auto; background-position: 50% 0; border-left: 10px solid var(--yellow); }
+
+/* ---------- services 1080x1350: what Patrick can be hired for, as stations along a road ---------- */
+#services { width: 1080px; height: 1350px; }
+#services .head { position: absolute; left: 72px; right: 72px; top: 76px; }
+#services .eyebrow { display: flex; align-items: center; gap: 18px; font: 600 23px/1.2 var(--display); text-transform: uppercase; letter-spacing: .14em; margin-bottom: 30px; }
+#services .eyebrow::before { content: ""; width: 44px; height: 6px; background: var(--yellow); flex: none; }
+#services h1 { font-size: 100px; line-height: 1; font-weight: 700; }
+#services .art { position: absolute; inset: 0; }
+#services .st { position: absolute; left: 196px; right: 72px; }
+#services .st h2 { font: 650 50px/1.08 var(--display); font-stretch: 106%; letter-spacing: -0.02em; }
+#services .st p { margin-top: 10px; font-size: 29px; line-height: 1.35; color: var(--ink-2); max-width: 760px; }
+#services .foot { position: absolute; left: 72px; right: 72px; bottom: 58px; display: flex; justify-content: space-between; align-items: flex-end; }
+#services .foot .lockup { font-size: 40px; }
+#services .foot .where { font-size: 24px; color: var(--ink-2); text-align: right; line-height: 1.35; }
+#services .foot .where b { display: block; font: 650 30px/1.2 var(--display); color: var(--ink); }
+
+/* ---------- quote 1080x1350: Patrick's own words, dark ---------- */
+#quote { width: 1080px; height: 1350px; }
+#quote .mark { position: absolute; left: 64px; top: 70px; font: 700 300px/1 var(--display); color: var(--yellow); }
+#quote blockquote { position: absolute; left: 80px; right: 80px; top: 320px; font: 600 80px/1.1 var(--display); font-stretch: 104%; letter-spacing: -0.02em; text-wrap: balance; }
+#quote .who { position: absolute; left: 80px; right: 80px; top: 990px; display: flex; align-items: center; gap: 32px; }
+#quote .face { width: 150px; height: 150px; border-radius: 50%; flex: none; background: url(../src/img/patrick-hero.jpg) no-repeat; background-size: 180px auto; background-position: -23px -41px; box-shadow: 0 0 0 7px var(--yellow); }
+#quote .who b { display: block; font: 650 42px/1.15 var(--display); font-stretch: 106%; }
+#quote .who span { font-size: 28px; color: var(--on-dark-2); }
+#quote .art { position: absolute; inset: 0; }
+
+/* ---------- tips 1080x1350: a warning sign for the tips series ---------- */
+#tips { width: 1080px; height: 1350px; }
+#tips .art { position: absolute; inset: 0; }
+#tips .text { position: absolute; left: 72px; right: 72px; top: 770px; }
+#tips h1 { font-size: 140px; line-height: .98; font-weight: 720; }
+#tips .sub { margin-top: 30px; font-size: 36px; line-height: 1.38; color: var(--ink-2); max-width: 900px; }
+#tips .foot { position: absolute; left: 72px; right: 72px; bottom: 60px; display: flex; justify-content: space-between; align-items: center; }
+#tips .foot .lockup { font-size: 40px; }
+#tips .url { font: 650 32px/1 var(--display); font-stretch: 105%; }
 </style>
 </head>
 <body>
@@ -192,6 +227,62 @@ svg { display: block; }
   <div class="photo" role="img" aria-label="Patrick Mc Gloin"></div>
 </div>
 
+
+<!-- ============ services ============ -->
+<div class="frame paper" id="services">
+  <svg class="art" viewBox="0 0 1080 1350" width="1080" height="1350" aria-hidden="true">
+    <path d="M 110 430 V 1060 A 100 100 0 0 0 210 1160 H 1120" fill="none" stroke="#d9d4c9" stroke-width="58" stroke-linecap="round"/>
+    <path d="M 110 430 V 1060 A 100 100 0 0 0 210 1160 H 1120" fill="none" stroke="#1b1f24" stroke-width="50" stroke-linecap="round"/>
+    <path d="M 110 446 V 1060 A 100 100 0 0 0 210 1160 H 1120" fill="none" stroke="#f0c43c" stroke-width="7" stroke-dasharray="22 17"/>
+    <g fill="#f4f1ea" stroke="#16191d" stroke-width="5"><circle cx="110" cy="532" r="15"/><circle cx="110" cy="752" r="15"/><circle cx="110" cy="972" r="15"/></g>
+  </svg>
+  <div class="head">
+    <p class="eyebrow" data-t="services.eyebrow"></p>
+    <h1 class="d" data-t="services.h1"></h1>
+  </div>
+  <div id="stations"></div>
+  <div class="foot">
+    <span class="lockup"><svg class="mk" viewBox="10 9 44 46"><path class="road" d="M18 53V17l28 30V11"/><path class="cl" d="M18 53V17l28 30V11"/></svg>NovaCoach</span>
+    <span class="where" data-t="services.where"></span>
+  </div>
+</div>
+
+<!-- ============ quote ============ -->
+<div class="frame dark" id="quote">
+  <svg class="art bigroad" viewBox="0 0 1080 1350" width="1080" height="1350" aria-hidden="true">
+    <defs><path id="qr" d="M -20 1268 H 1100"/></defs>
+    <use href="#qr" class="edge" stroke-width="58"/>
+    <use href="#qr" class="surface" stroke-width="50"/>
+    <use href="#qr" class="cl" stroke-width="8" stroke-dasharray="30 24"/>
+  </svg>
+  <div class="mark" data-t="quote.mark"></div>
+  <blockquote data-t="quote.q"></blockquote>
+  <div class="who">
+    <div class="face" role="img" aria-label="Patrick Mc Gloin"></div>
+    <div><b>Patrick Mc Gloin</b><span data-t="quote.role"></span></div>
+  </div>
+</div>
+
+<!-- ============ tips ============ -->
+<div class="frame paper" id="tips">
+  <svg class="art" viewBox="0 0 1080 1350" width="1080" height="1350" aria-hidden="true">
+    <path d="M 540 112 L 862 668 H 218 Z" fill="#f0c43c" stroke="#16191d" stroke-width="40" stroke-linejoin="round"/>
+    <path d="M 540 160 L 820.4 644.1 H 259.6 Z" fill="none" stroke="#f4f1ea" stroke-width="10" stroke-linejoin="miter"/>
+    <g transform="translate(540 474) scale(5.1) translate(-32 -32)">
+      <path d="M18 53V17l28 30V11" fill="none" stroke="#16191d" stroke-width="12.5" stroke-linejoin="round"/>
+      <path d="M18 53V17l28 30V11" fill="none" stroke="#f4f1ea" stroke-width="2.2" stroke-dasharray="4 3.6" stroke-dashoffset="2" stroke-linejoin="round"/>
+    </g>
+  </svg>
+  <div class="text">
+    <h1 class="d" data-t="tips.h1"></h1>
+    <p class="sub" data-t="tips.sub"></p>
+  </div>
+  <div class="foot">
+    <span class="lockup"><svg class="mk" viewBox="10 9 44 46"><path class="road" d="M18 53V17l28 30V11"/><path class="cl" d="M18 53V17l28 30V11"/></svg>NovaCoach</span>
+    <span class="url">novacoach.no</span>
+  </div>
+</div>
+
 <script>
 const T = {
   no: {
@@ -206,6 +297,14 @@ const T = {
     },
     cover: { h1: "Kurs og coaching i Novapoint og Quadri", sub: "På deres eget prosjekt, med Patrick&nbsp;Mc&nbsp;Gloin · <b>novacoach.no</b>" },
     banner: { h1: "Kurs og coaching i Novapoint og Quadri", sub: "På deres eget prosjekt. Hos dere, i hele Europa. <b>novacoach.no</b>" },
+    services: {
+      eyebrow: "Novapoint Veg og Quadri",
+      h1: "Lei inn 38 år med Novapoint.",
+      list: [["Vegkurs", "Grunnkurs, eller bygget på deres eget prosjekt. Hos dere."], ["Arbeidsflyt i Quadri", "Oppsett, roller og samarbeid, så hele teamet jobber likt."], ["Dataflyt til anlegg", "Sømløs dataflyt fra detaljprosjektering til bygging."]],
+      where: "Et supplement til Trimbles egne tilbud<b>novacoach.no</b>",
+    },
+    quote: { mark: "«", q: "Pensjon handler om å gjøre det man liker, og å lære bort Novapoint har alltid vært en lidenskap.", role: "NovaCoach · novacoach.no" },
+    tips: { h1: "Tips fremover.", sub: "Praktiske tips om Novapoint Veg og Quadri, her på LinkedIn. Følg NovaCoach, så går du ikke glipp av dem." },
     og: { h1: "Lær Novapoint på deres eget prosjekt.", sub: "Kurs og coaching i Novapoint og Quadri med Patrick&nbsp;Mc&nbsp;Gloin." },
   },
   en: {
@@ -220,6 +319,14 @@ const T = {
     },
     cover: { h1: "Novapoint and Quadri training and coaching", sub: "On your own project, with Patrick&nbsp;Mc&nbsp;Gloin · <b>novacoach.no</b>" },
     banner: { h1: "Novapoint and Quadri training and coaching", sub: "On your own project. On site, anywhere in Europe. <b>novacoach.no</b>" },
+    services: {
+      eyebrow: "Novapoint Road and Quadri",
+      h1: "Hire 38 years of Novapoint.",
+      list: [["Road design courses", "Standard, or built on your own project. At your office."], ["Quadri workflows", "Setup, roles and collaboration, so the whole team works the same way."], ["Data flow to construction", "A seamless flow of data from detailed design to construction."]],
+      where: "A complement to Trimble's own offerings<b>novacoach.no</b>",
+    },
+    quote: { mark: "“", q: "Retirement is about doing what you love, and teaching Novapoint has always been a passion.", role: "NovaCoach · novacoach.no" },
+    tips: { h1: "Tips ahead.", sub: "Practical tips on Novapoint Road and Quadri, here on LinkedIn. Follow NovaCoach so you don't miss them." },
     og: { h1: "Learn Novapoint on your own project.", sub: "Novapoint and Quadri training and coaching with Patrick&nbsp;Mc&nbsp;Gloin." },
   },
 };
@@ -233,6 +340,8 @@ for (const el of document.querySelectorAll("[data-t]")) {
   el.innerHTML = t[a][b];
 }
 document.getElementById("offers").innerHTML = t.offer.list.map(([h, s]) => `<li><b>${h}</b><span>${s}</span></li>`).join("");
+
+document.getElementById("stations").innerHTML = t.services.list.map(([h, p], i) => `<div class="st" style="top:${510 + i * 220}px"><h2>${h}</h2><p>${p}</p></div>`).join("");
 
 // Career timeline, drawn to scale like chainage along an alignment: 1988 at x0, 2026 at x1.
 (function timeline() {
