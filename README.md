@@ -36,3 +36,12 @@ linkedin/                LinkedIn launch kit: images, post texts, render script 
 - [ ] `site.json`: swap patrickjmcgloin@outlook.com for patrick@novacoach.no once the mailbox exists; confirm phone.
 - [ ] Enable the testimonial block in `src/_includes/pages/om.njk` once a quote is approved.
 - [ ] Point novacoach.no DNS at Netlify.
+
+## Proposed changes from Patrick's LinkedIn post
+Not done yet; waiting on a decision. Patrick's own post text is in `linkedin/README.md`.
+- [ ] Add "som et supplement til Trimbles egne tilbud" / "a complement to Trimble's own offerings" next to the not-affiliated line in the footer, and on the front page.
+- [ ] Use his wording "opplæring og prosjektstøtte" (training and project support), e.g. eyebrow and meta: "Kurs, coaching og prosjektstøtte i Novapoint og Quadri".
+- [ ] Mention that Novapoint Veg and Quadri are now part of Trimble Infrastructure Design Suite.
+- [ ] His title: email signature says Senior Product Director, the site says produktdirektør / product director.
+- [ ] Link preview: use `linkedin/img/novacoach-og-no.png` / `-en.png` (1200×630) as `og:image` in `base.njk`.
+- [ ] Footer link to the NovaCoach LinkedIn page once it exists ("Følg NovaCoach på LinkedIn").
