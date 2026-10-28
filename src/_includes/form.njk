@@ -17,17 +17,7 @@
     {%- endfor %}
   </fieldset>
   <label class="share" id="share-wrap" hidden><input type="checkbox" name="share_project" value="ja"><span>{{ f.share }}</span></label>
-  <div class="grid-2">
-    <label>{{ f.location }}<input name="location" autocomplete="address-level2"></label>
-    <label>{{ f.team }}<input name="team_size" inputmode="numeric" pattern="[0-9]*"></label>
-  </div>
-  <fieldset>
-    <legend>{{ f.timing }}</legend>
-    {%- for o in f.timings %}
-    <label class="choice"><input type="radio" name="timing" value="{{ o }}"><span>{{ o }}</span></label>
-    {%- endfor %}
-  </fieldset>
-  <label>{{ f.message }}<textarea name="message" rows="5"></textarea></label>
+  <label>{{ f.message }}<textarea name="message" rows="5" placeholder="{{ f.messageHint }}"></textarea></label>
   <div class="form-foot">
     <button type="submit" class="btn">{{ f.submit }}</button>
     <p class="small">{{ t.common.responseNote }} {{ f.privacy }} <a href="{{ '/personvern/' if lang == 'no' else '/en/privacy/' }}">{{ t.common.privacyLink }}</a>.</p>
