@@ -43,5 +43,5 @@ Not done yet; waiting on a decision. Patrick's own post text is in `linkedin/REA
 - [ ] Use his wording "opplæring og prosjektstøtte" (training and project support), e.g. eyebrow and meta: "Kurs, coaching og prosjektstøtte i Novapoint og Quadri".
 - [ ] Mention that Novapoint Veg and Quadri are now part of Trimble Infrastructure Design Suite.
 - [ ] His title: email signature says Senior Product Director, the site says produktdirektør / product director.
-- [ ] Link preview: use `linkedin/img/novacoach-og-no.png` / `-en.png` (1200×630) as `og:image` in `base.njk`.
+- [x] Link preview: `linkedin/img/novacoach-og-no.png` / `-en.png` (1200×630) copied as `src/img/og-no.jpg` / `og-en.jpg` and used as `og:image` in `base.njk`.
 - [ ] Footer link to the NovaCoach LinkedIn page once it exists ("Følg NovaCoach på LinkedIn").
