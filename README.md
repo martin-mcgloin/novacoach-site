@@ -24,10 +24,14 @@ src/_includes/base.njk   layout, header, footer
 src/_includes/form.njk   interest form (Netlify Forms)
 src/_includes/pages/     one template per page type, shared by both languages
 src/no/, src/en/         thin page stubs: URL, page type, link to the other language
-src/css/style.css        styles (design: dark "Asfalt" concept)
+src/css/style.css        styles (design: light "Tegnekontoret" look)
 src/img/                 photos and road-model images
-linkedin/                LinkedIn launch kit: images, post texts, render script (not deployed)
+src/brand.njk            brand kit for Patrick at /brand/: unlisted, noindex, not in the sitemap
+src/brand/               logo symbol files (SVG, PNG) for the brand kit
+linkedin/                LinkedIn launch kit: images, post texts, render script. Only img/ is published, as /brand/img/
 ```
+
+To add a file to the brand kit, put it in `linkedin/img/` or `src/brand/` and add an entry to the front matter of `src/brand.njk`.
 
 ## Form
 `data-netlify="true"` on the form means Netlify collects submissions. Set up email notifications in Netlify: Site → Forms → Notifications → add Patrick's email. Spam is filtered by the honeypot field plus Netlify's own filter.

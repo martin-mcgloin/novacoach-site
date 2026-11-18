@@ -11,3 +11,9 @@
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Brand kit for Patrick: reachable by link, kept out of search results
+[[headers]]
+  for = "/brand/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"

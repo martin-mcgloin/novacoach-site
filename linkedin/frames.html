@@ -79,6 +79,13 @@ svg { display: block; }
 #logo.on { display: grid; }
 #logo svg { width: 214px; height: 224px; }
 
+/* ---------- wordmark 960x200, transparent: dark text for light backgrounds, light text for dark ---------- */
+.clear { width: 960px; height: 200px; display: none; place-items: center; }
+.clear.on { display: grid; }
+html:has(.clear.on), html:has(.clear.on) body { background: transparent; }
+.clear .lockup { font-size: 120px; }
+#wordmark-light .lockup { color: var(--on-dark); }
+
 /* ---------- company cover 1200x200 (6:1) ---------- */
 #cover { width: 1200px; height: 200px; }
 #cover .text { position: absolute; left: 0; right: 0; top: 34px; text-align: center; }
@@ -186,6 +193,14 @@ svg { display: block; }
 <!-- ============ logo ============ -->
 <div class="frame paper" id="logo">
   <svg class="mk" viewBox="10 9 44 46"><path class="road" d="M18 53V17l28 30V11"/><path class="cl" d="M18 53V17l28 30V11"/></svg>
+</div>
+
+<!-- ============ wordmarks ============ -->
+<div class="frame clear" id="wordmark">
+  <span class="lockup"><svg class="mk" viewBox="10 9 44 46"><path class="road" d="M18 53V17l28 30V11"/><path class="cl" d="M18 53V17l28 30V11"/></svg>NovaCoach</span>
+</div>
+<div class="frame clear" id="wordmark-light">
+  <span class="lockup"><svg class="mk" viewBox="0 0 64 64"><rect class="plate" width="64" height="64" rx="12"/><path class="road" d="M18 53V17l28 30V11"/><path class="cl" d="M18 53V17l28 30V11"/></svg>NovaCoach</span>
 </div>
 
 <!-- ============ cover ============ -->

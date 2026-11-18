@@ -9,6 +9,8 @@ const FRAMES = [
   ["farewell", 1080, 1350, 1, ["no", "en"]],
   ["offer", 1080, 1350, 1, ["no", "en"]],
   ["logo", 400, 400, 2, ["no"]],
+  ["wordmark", 960, 200, 2.5, ["no"]],
+  ["wordmark-light", 960, 200, 2.5, ["no"]],
   ["cover", 1200, 200, 3.5, ["no", "en"]],
   ["banner", 1584, 396, 2, ["no", "en"]],
   ["og", 1200, 630, 1, ["no", "en"]],
@@ -27,8 +29,9 @@ const FRAMES = [
       await page.goto(`file://${path.join(__dirname, "frames.html")}?f=${f}&lang=${lang}`);
       await page.evaluate(() => document.fonts.ready);
       await page.waitForLoadState("networkidle");
-      const name = f === "logo" ? "novacoach-logo.png" : `novacoach-${f}-${lang}.png`;
-      await page.screenshot({ path: path.join(out, name), clip: { x: 0, y: 0, width: w, height: h } });
+      const single = f === "logo" || f.startsWith("wordmark");
+      const name = single ? `novacoach-${f}.png` : `novacoach-${f}-${lang}.png`;
+      await page.screenshot({ path: path.join(out, name), clip: { x: 0, y: 0, width: w, height: h }, omitBackground: f.startsWith("wordmark") });
       await page.close();
       console.log(name, `${w * scale}x${h * scale}`);
     }

@@ -1,0 +1,137 @@
+---
+permalink: /brand/
+lang: en
+layout: base.njk
+pagekey: brand
+noindex: true
+eleventyExcludeFromCollections: true
+# Unlisted brand kit for Patrick. Files live in linkedin/img (published as /brand/img/) and src/brand/.
+sections:
+  - h: Your LinkedIn profile
+    grid: one
+    items:
+      - h: Profile banner
+        size: 3168 × 792 px
+        p: The background image at the top of your profile. Click the edit icon on the background image and upload the file. Your profile photo covers the bottom left, so the text sits on the right.
+        img: img/novacoach-banner-en.png
+        files: [[Norwegian, img/novacoach-banner-no.png], [English, img/novacoach-banner-en.png]]
+  - h: The NovaCoach page on LinkedIn
+    grid: two
+    items:
+      - h: Page logo
+        size: 800 × 800 px
+        p: The square logo for the company page.
+        img: img/novacoach-logo.png
+        files: [[PNG, img/novacoach-logo.png]]
+      - h: Cover image
+        size: 4200 × 700 px
+        p: The wide image at the top of the page. The text sits in the middle, because the logo covers the bottom left and phones crop the sides.
+        img: img/novacoach-cover-en.png
+        files: [[Norwegian, img/novacoach-cover-no.png], [English, img/novacoach-cover-en.png]]
+  - h: Images for posts
+    lead: All 1080 × 1350 px, portrait.
+    grid: three
+    items:
+      - h: Changing lanes.
+        p: Announces NovaCoach.
+        img: img/novacoach-launch-en.png
+        files: [[Norwegian, img/novacoach-launch-no.png], [English, img/novacoach-launch-en.png]]
+      - h: 38 years of Novapoint.
+        p: Your career as a timeline, 1988 to 2026.
+        img: img/novacoach-farewell-en.png
+        files: [[Norwegian, img/novacoach-farewell-no.png], [English, img/novacoach-farewell-en.png]]
+      - h: Hire 38 years of Novapoint.
+        p: What you offer, in three parts.
+        img: img/novacoach-services-en.png
+        files: [[Norwegian, img/novacoach-services-no.png], [English, img/novacoach-services-en.png]]
+      - h: Learn Novapoint on your own project.
+        p: The courses and how long they take.
+        img: img/novacoach-offer-en.png
+        files: [[Norwegian, img/novacoach-offer-no.png], [English, img/novacoach-offer-en.png]]
+      - h: Tips ahead.
+        p: Opens a series of practical tips.
+        img: img/novacoach-tips-en.png
+        files: [[Norwegian, img/novacoach-tips-no.png], [English, img/novacoach-tips-en.png]]
+      - h: Quote
+        p: For a personal post about why you started NovaCoach.
+        img: img/novacoach-quote-en.png
+        files: [[Norwegian, img/novacoach-quote-no.png], [English, img/novacoach-quote-en.png]]
+  - h: Link preview
+    grid: one
+    items:
+      - h: Shared links to novacoach.no
+        size: 1200 × 630 px
+        p: What LinkedIn, Teams and email show when someone shares a link to the site. The site already uses it, so there is nothing to upload. It also works as a wide image in a post or an email.
+        img: img/novacoach-og-en.png
+        files: [[Norwegian, img/novacoach-og-no.png], [English, img/novacoach-og-en.png]]
+  - h: Logo
+    lead: Keep the proportions, leave some space around it, and keep the colours as they are.
+    grid: two
+    items:
+      - h: Logo for light backgrounds
+        size: 2400 × 500 px, transparent
+        p: For email signatures, documents and slides.
+        img: img/novacoach-wordmark.png
+        files: [[PNG, img/novacoach-wordmark.png]]
+      - h: Logo for dark backgrounds
+        size: 2400 × 500 px, transparent
+        p: For dark slides and photos.
+        img: img/novacoach-wordmark-light.png
+        bg: dark
+        files: [[PNG, img/novacoach-wordmark-light.png]]
+      - h: Symbol
+        size: 512 × 512 px, or SVG
+        p: The N as a road, for places where the full logo does not fit, such as an icon. The SVG stays sharp at any size, so give it to whoever prints.
+        img: novacoach-mark.svg
+        files: [[PNG, novacoach-mark-512.png], [SVG, novacoach-mark.svg]]
+      - h: Symbol without background
+        size: SVG
+        p: The same symbol without the light square, for light backgrounds.
+        img: novacoach-mark-no-plate.svg
+        files: [[SVG, novacoach-mark-no-plate.svg]]
+colours:
+  - [Yellow, "#F0C43C", "The centre line. Use it for one highlight, not for large areas."]
+  - [Asphalt, "#14171B", "Text and dark backgrounds."]
+  - [Paper, "#F4F1EA", "Light backgrounds."]
+---
+<section class="wrap block page-head">
+  <h1>Brand kit</h1>
+  <p class="lead">Logos and images for LinkedIn, email and documents. Click a button to download the file. Most images come in a Norwegian and an English version.</p>
+  <p class="note">This page is not in the site menu. Bookmark it, or keep the link.</p>
+</section>
+{%- for s in sections %}
+<section class="wrap block kit">
+  <div class="kit-head">
+    <h2>{{ s.h }}</h2>
+    {%- if s.lead %}<p class="lead">{{ s.lead }}</p>{% endif %}
+  </div>
+  <div class="kit-grid {{ s.grid }}">
+    {%- for i in s.items %}
+    <figure class="asset">
+      <a class="asset-img{% if i.bg == 'dark' %} on-dark{% endif %}" href="/brand/{{ i.img }}" target="_blank" rel="noopener"><img src="/brand/{{ i.img }}" alt="{{ i.h }}" loading="lazy"></a>
+      <figcaption>
+        <h3>{{ i.h }}</h3>
+        {%- if i.size %}<p class="small">{{ i.size }}</p>{% endif %}
+        <p>{{ i.p }}</p>
+        <p class="asset-dl">
+          {%- for f in i.files %}
+          <a class="btn btn-ghost btn-small" href="/brand/{{ f[1] }}" download><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v8M4 6.5 8 10.5l4-4M3 14h10"/></svg>{{ f[0] }}</a>
+          {%- endfor %}
+        </p>
+      </figcaption>
+    </figure>
+    {%- endfor %}
+  </div>
+</section>
+{%- endfor %}
+<section class="wrap block kit">
+  <div class="kit-head">
+    <h2>Colours and fonts</h2>
+  </div>
+  <div class="swatches">
+    {%- for c in colours %}
+    <div class="swatch"><div class="chip" style="background: {{ c[1] }}"></div><p><b>{{ c[0] }}</b> {{ c[1] }}<br><span class="small">{{ c[2] }}</span></p></div>
+    {%- endfor %}
+  </div>
+  <p class="kit-fonts">Headings and the logo use <a href="https://fonts.google.com/specimen/Archivo" rel="noopener" target="_blank">Archivo</a>, body text uses <a href="https://fonts.google.com/specimen/IBM+Plex+Sans" rel="noopener" target="_blank">IBM Plex Sans</a>. Both are free from Google Fonts. In Word and PowerPoint, Arial works as a stand-in if they are not installed.</p>
+</section>

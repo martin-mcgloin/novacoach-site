@@ -1,10 +1,10 @@
 # NovaCoach LinkedIn launch kit
 
-Plan, images and texts for Patrick's last week at Trimble and the NovaCoach launch. This folder sits outside `src/`, so Eleventy never publishes it.
+Plan, images and texts for Patrick's last week at Trimble and the NovaCoach launch. This folder sits outside `src/`. Only `img/` is published, as `/brand/img/`, for the brand kit page at novacoach.no/brand/.
 
 | File | What it is |
 |---|---|
-| `img/` | 19 PNGs, ready to upload to LinkedIn |
+| `img/` | 21 PNGs: 19 ready to upload to LinkedIn, plus the horizontal logo for light and dark backgrounds (`novacoach-wordmark.png`, `novacoach-wordmark-light.png`, 2400×500, transparent) |
 | `README.md` | This file: the plan, open decisions and every text |
 | `kit.html` | The same kit as a page. Open it in a browser straight from this folder |
 | `frames.html` | Templates for the images, Norwegian and English. Text lives in the `T` object at the bottom |

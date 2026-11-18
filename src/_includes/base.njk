@@ -7,9 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ meta.title }}</title>
   <meta name="description" content="{{ meta.description }}">
+  {%- if noindex %}
+  <meta name="robots" content="noindex">
+  {%- endif %}
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  {%- if alt %}
   <link rel="alternate" hreflang="{{ 'en' if lang == 'no' else 'no' }}" href="{{ site.url }}{{ alt }}">
   <link rel="alternate" hreflang="{{ lang }}" href="{{ site.url }}{{ page.url }}">
+  {%- endif %}
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -46,7 +51,9 @@
       <a href="/en/about/">{{ t.nav.om }}</a>
       <a href="/en/contact/" class="nav-cta btn btn-small">{{ t.nav.cta }}</a>
       {%- endif -%}
+      {%- if alt -%}
       <a href="{{ alt }}" class="lang" lang="{{ 'en' if lang == 'no' else 'no' }}" hreflang="{{ 'en' if lang == 'no' else 'no' }}">{{ t.nav.switch }}</a>
+      {%- endif -%}
     </nav>
   </div>
 </header>

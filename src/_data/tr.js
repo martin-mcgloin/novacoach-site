@@ -320,6 +320,9 @@ const en = {
     submit: "Send",
     privacy: "We use your details only to reply to you. No newsletter.",
   },
+  brand: {
+    meta: { title: "Brand kit – NovaCoach", description: "Logos and images for LinkedIn, email and documents." },
+  },
   personvern: {
     meta: { title: "Privacy – NovaCoach", description: "How NovaCoach handles the details you send us." },
     h1: "Privacy",
